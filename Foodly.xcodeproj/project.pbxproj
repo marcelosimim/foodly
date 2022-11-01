@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		A30261B32911876700E707C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261B22911876700E707C6 /* AppDelegate.swift */; };
 		A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261B42911876700E707C6 /* SceneDelegate.swift */; };
-		A30261B72911876700E707C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261B62911876700E707C6 /* ViewController.swift */; };
 		A30261BC2911876900E707C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30261BB2911876900E707C6 /* Assets.xcassets */; };
 		A30261BF2911876900E707C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30261BD2911876900E707C6 /* LaunchScreen.storyboard */; };
 		A30261CA2911876A00E707C6 /* FoodlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261C92911876A00E707C6 /* FoodlyTests.swift */; };
 		A30261D42911876A00E707C6 /* FoodlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261D32911876A00E707C6 /* FoodlyUITests.swift */; };
 		A30261D62911876A00E707C6 /* FoodlyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261D52911876A00E707C6 /* FoodlyUITestsLaunchTests.swift */; };
+		A30261E829118D7600E707C6 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261E729118D7600E707C6 /* GetStartedViewController.swift */; };
+		A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261E929118D9B00E707C6 /* GetStartedView.swift */; };
+		A30261ED29118E3E00E707C6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261EC29118E3E00E707C6 /* UIImage.swift */; };
+		A30261F129118F6700E707C6 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F029118F6700E707C6 /* Stylable.swift */; };
+		A30261F32911903300E707C6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F22911903300E707C6 /* UIView.swift */; };
+		A30261F62911926A00E707C6 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F52911926A00E707C6 /* RedButton.swift */; };
+		A30261F8291192FC00E707C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F7291192FC00E707C6 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,6 @@
 		A30261AF2911876700E707C6 /* Foodly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30261B22911876700E707C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30261B42911876700E707C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A30261B62911876700E707C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A30261BB2911876900E707C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A30261BE2911876900E707C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30261C02911876900E707C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		A30261CF2911876A00E707C6 /* FoodlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30261D32911876A00E707C6 /* FoodlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodlyUITests.swift; sourceTree = "<group>"; };
 		A30261D52911876A00E707C6 /* FoodlyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodlyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A30261E729118D7600E707C6 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		A30261E929118D9B00E707C6 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		A30261EC29118E3E00E707C6 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		A30261F029118F6700E707C6 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		A30261F22911903300E707C6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		A30261F52911926A00E707C6 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
+		A30261F7291192FC00E707C6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,10 @@
 			children = (
 				A30261E22911877200E707C6 /* AppDelegate */,
 				A30261E32911877C00E707C6 /* Resources */,
-				A30261B62911876700E707C6 /* ViewController.swift */,
+				A30261EE29118F5C00E707C6 /* Components */,
+				A30261E429118D2300E707C6 /* Presentation */,
+				A30261EB29118E2B00E707C6 /* Extensions */,
+				A30261EF29118F5C00E707C6 /* Protocols */,
 				A30261C02911876900E707C6 /* Info.plist */,
 			);
 			path = Foodly;
@@ -138,6 +153,65 @@
 				A30261BD2911876900E707C6 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A30261E429118D2300E707C6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A30261E529118D3A00E707C6 /* Before Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A30261E529118D3A00E707C6 /* Before Login */ = {
+			isa = PBXGroup;
+			children = (
+				A30261E629118D3F00E707C6 /* Get Started */,
+			);
+			path = "Before Login";
+			sourceTree = "<group>";
+		};
+		A30261E629118D3F00E707C6 /* Get Started */ = {
+			isa = PBXGroup;
+			children = (
+				A30261E729118D7600E707C6 /* GetStartedViewController.swift */,
+				A30261E929118D9B00E707C6 /* GetStartedView.swift */,
+			);
+			path = "Get Started";
+			sourceTree = "<group>";
+		};
+		A30261EB29118E2B00E707C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A30261EC29118E3E00E707C6 /* UIImage.swift */,
+				A30261F22911903300E707C6 /* UIView.swift */,
+				A30261F7291192FC00E707C6 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A30261EE29118F5C00E707C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A30261F42911925000E707C6 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A30261EF29118F5C00E707C6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A30261F029118F6700E707C6 /* Stylable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A30261F42911925000E707C6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A30261F52911926A00E707C6 /* RedButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A30261B72911876700E707C6 /* ViewController.swift in Sources */,
 				A30261B32911876700E707C6 /* AppDelegate.swift in Sources */,
+				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
+				A30261ED29118E3E00E707C6 /* UIImage.swift in Sources */,
+				A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */,
+				A30261F32911903300E707C6 /* UIView.swift in Sources */,
+				A30261F129118F6700E707C6 /* Stylable.swift in Sources */,
 				A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */,
+				A30261F8291192FC00E707C6 /* UIColor.swift in Sources */,
+				A30261E829118D7600E707C6 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
