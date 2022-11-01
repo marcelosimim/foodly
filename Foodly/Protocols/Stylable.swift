@@ -27,4 +27,6 @@ public extension Stylable {
     func setupImages() { }
 
     func setupTexts() { }
+
+    func setupColors() { }
 }

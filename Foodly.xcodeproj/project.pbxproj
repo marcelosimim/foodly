@@ -21,6 +21,9 @@
 		A30261F32911903300E707C6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F22911903300E707C6 /* UIView.swift */; };
 		A30261F62911926A00E707C6 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F52911926A00E707C6 /* RedButton.swift */; };
 		A30261F8291192FC00E707C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F7291192FC00E707C6 /* UIColor.swift */; };
+		A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FA2911A21500E707C6 /* Coordinator.swift */; };
+		A30261FD2911A23F00E707C6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FC2911A23F00E707C6 /* MainCoordinator.swift */; };
+		A30262012911A3A600E707C6 /* SignUpStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262002911A3A600E707C6 /* SignUpStep1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		A30261F22911903300E707C6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A30261F52911926A00E707C6 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		A30261F7291192FC00E707C6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		A30261FA2911A21500E707C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A30261FC2911A23F00E707C6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A30262002911A3A600E707C6 /* SignUpStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 			children = (
 				A30261E22911877200E707C6 /* AppDelegate */,
 				A30261E32911877C00E707C6 /* Resources */,
+				A30261F92911A1D400E707C6 /* Coordinator */,
 				A30261EE29118F5C00E707C6 /* Components */,
 				A30261E429118D2300E707C6 /* Presentation */,
 				A30261EB29118E2B00E707C6 /* Extensions */,
@@ -166,6 +173,7 @@
 		A30261E529118D3A00E707C6 /* Before Login */ = {
 			isa = PBXGroup;
 			children = (
+				A30261FE2911A37A00E707C6 /* SignUp */,
 				A30261E629118D3F00E707C6 /* Get Started */,
 			);
 			path = "Before Login";
@@ -212,6 +220,31 @@
 				A30261F52911926A00E707C6 /* RedButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A30261F92911A1D400E707C6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A30261FA2911A21500E707C6 /* Coordinator.swift */,
+				A30261FC2911A23F00E707C6 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A30261FE2911A37A00E707C6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A30261FF2911A39200E707C6 /* Step1 */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A30261FF2911A39200E707C6 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				A30262002911A3A600E707C6 /* SignUpStep1ViewController.swift */,
+			);
+			path = Step1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,8 +379,11 @@
 			files = (
 				A30261B32911876700E707C6 /* AppDelegate.swift in Sources */,
 				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
+				A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */,
 				A30261ED29118E3E00E707C6 /* UIImage.swift in Sources */,
+				A30262012911A3A600E707C6 /* SignUpStep1ViewController.swift in Sources */,
 				A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */,
+				A30261FD2911A23F00E707C6 /* MainCoordinator.swift in Sources */,
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
 				A30261F129118F6700E707C6 /* Stylable.swift in Sources */,
 				A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */,

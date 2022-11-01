@@ -10,10 +10,9 @@ import UIKit
 class GetStartedView: UIView {
     private let backgroundImage = UIImageView()
     private let mainLabel = UILabel()
-    private let getStartedButton = RedButton()
+    let getStartedButton = RedButton()
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    func setup() {
         setupStyles()
         addViews()
     }

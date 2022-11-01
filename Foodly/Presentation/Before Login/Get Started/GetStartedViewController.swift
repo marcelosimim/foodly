@@ -7,11 +7,22 @@
 
 import UIKit
 
-class GetStartedViewController: UIViewController {
+class GetStartedViewController: UIViewController, Coordinating {
     private let customView = GetStartedView()
+    var coodinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
+        customView.setup()
+        setupButtons()
+    }
+
+    private func setupButtons() {
+        customView.getStartedButton.addTarget(self, action: #selector(getStartedPressed), for: .touchDown)
+    }
+
+    @objc private func getStartedPressed() {
+        coodinator?.eventOccurred(with: .getStartedTapped)
     }
 }
