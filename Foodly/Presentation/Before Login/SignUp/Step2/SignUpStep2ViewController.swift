@@ -38,8 +38,7 @@ class SignUpStep2ViewController: UIViewController, Coordinating {
     }
 
     @objc private func arrowPressed() {
-        // viewmodel.saveEmail()
-        // coodinator?.eventOccurred(with: .signUpStep1Tapped)
+        viewmodel.signUp()
     }
 
     private func viewModelBinds() {
@@ -48,6 +47,18 @@ class SignUpStep2ViewController: UIViewController, Coordinating {
         viewmodel.isPasswordValid.bind { isValid in
             arrowButton.isEnabled = isValid
         }.disposed(by: disposeBag)
+
+        viewmodel.signUpHasFinished.bind { [weak self] error in
+            error == nil ? self?.navigateToHome() : self?.signUpFailed(error!)
+        }.disposed(by: disposeBag)
+    }
+
+    private func navigateToHome() {
+        coodinator?.eventOccurred(with: .signUpStep2Tapped)
+    }
+
+    private func signUpFailed(_ error: Error) {
+        Alert.forError(self, message: error.localizedDescription)
     }
 }
 
