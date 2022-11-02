@@ -38,11 +38,13 @@ class InputTextField: UIView {
     private func setupAsEmail() {
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
+        textField.placeholder = "youremail@address.com"
     }
 
     private func setupAsPassword() {
         textField.keyboardType = .default
         textField.isSecureTextEntry = true
+        textField.placeholder = "Minimum 8 characters"
     }
 
     // MARK: - view methods
@@ -84,9 +86,6 @@ extension InputTextField: Stylable {
         arrowButton.imageView?.tintColor = .white
     }
 
-    func setupTexts() {
-        textField.placeholder = "youremail@address.com"
-    }
 
     func setupImages() {
         clearButton.setImage(.xmarkCircle, for: .normal)

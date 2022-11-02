@@ -1,25 +1,25 @@
 //
-//  SignUpStep1ViewController.swift
+//  SignUpStep2ViewController.swift
 //  Foodly
 //
-//  Created by Marcelo Simim Santos on 11/1/22.
+//  Created by Marcelo Simim Santos on 11/2/22.
 //
 
 import RxSwift
 import UIKit
 
-class SignUpStep1ViewController: UIViewController, Coordinating {
-    private let customView = SignUpStep1View()
-    private let viewmodel = AppContainer.shared.resolve(SignUpStep1ViewModel.self)!
+class SignUpStep2ViewController: UIViewController, Coordinating {
+    private let customView = SignUpStep2View()
+    private let viewmodel = AppContainer.shared.resolve(SignUpStep2ViewModel.self)!
     private let disposeBag = DisposeBag()
     var coodinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtons()
         view = customView
         customView.setup()
         customView.inputTextField.textField.delegate = self
+        setupButtons()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,26 +34,26 @@ class SignUpStep1ViewController: UIViewController, Coordinating {
 
     @objc private func clearPressed() {
         customView.inputTextField.textField.text = ""
-        viewmodel.checkEmail("")
+         viewmodel.checkPassword("")
     }
 
     @objc private func arrowPressed() {
-        viewmodel.saveEmail()
-        coodinator?.eventOccurred(with: .signUpStep1Tapped)
+        // viewmodel.saveEmail()
+        // coodinator?.eventOccurred(with: .signUpStep1Tapped)
     }
 
     private func viewModelBinds() {
         let arrowButton = customView.inputTextField.arrowButton
 
-        viewmodel.isEmailValid.bind { isValid in
+        viewmodel.isPasswordValid.bind { isValid in
             arrowButton.isEnabled = isValid
         }.disposed(by: disposeBag)
     }
 }
 
-extension SignUpStep1ViewController: UITextFieldDelegate {
+extension SignUpStep2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        viewmodel.checkEmail(textField.text ?? "")
+        viewmodel.checkPassword(textField.text ?? "")
         textField.resignFirstResponder()
         return true
     }

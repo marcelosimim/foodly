@@ -13,4 +13,8 @@ extension String {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }
+
+    func isValidPassword() -> Bool {
+        self.count >= 8
+    }
 }

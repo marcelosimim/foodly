@@ -9,6 +9,7 @@ import UIKit
 
 enum Event {
     case getStartedTapped
+    case signUpStep1Tapped
 }
 
 protocol Coordinator {
