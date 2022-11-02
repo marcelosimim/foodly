@@ -8,10 +8,12 @@
 import UIKit
 
 class RedButton: UIButton {
+    private let iconView = UIImageView()
 
     override func layoutSubviews() {
         super.layoutSubviews()
         setupStyles()
+        addViews()
         layer.cornerRadius = 10
     }
 
@@ -20,10 +22,17 @@ class RedButton: UIButton {
     }
 
     func setupRightIcon(icon: UIImage) {
-        setImage(icon, for: .normal)
-        semanticContentAttribute = .forceRightToLeft
-        imageEdgeInsets = UIEdgeInsets(top: 5, left: (bounds.width + 35), bottom: 5, right: 0)
+        iconView.image = icon
     }
+
+    private func addViews() {
+        addSubviews([iconView])
+        NSLayoutConstraint.activate([
+            iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            iconView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+        ])
+    }
+
 }
 
 extension RedButton: Stylable {

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08466F714936A5CDD1CA0CDC /* Pods_FoodlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */; };
+		7022A425844592C4E265731B /* Pods_Foodly_FoodlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */; };
 		A30261B32911876700E707C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261B22911876700E707C6 /* AppDelegate.swift */; };
 		A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261B42911876700E707C6 /* SceneDelegate.swift */; };
 		A30261BC2911876900E707C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30261BB2911876900E707C6 /* Assets.xcassets */; };
@@ -24,6 +26,12 @@
 		A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FA2911A21500E707C6 /* Coordinator.swift */; };
 		A30261FD2911A23F00E707C6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FC2911A23F00E707C6 /* MainCoordinator.swift */; };
 		A30262012911A3A600E707C6 /* SignUpStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262002911A3A600E707C6 /* SignUpStep1ViewController.swift */; };
+		A30262032911E32500E707C6 /* SignUpStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262022911E32500E707C6 /* SignUpStep1View.swift */; };
+		A30262062911E69A00E707C6 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262052911E69A00E707C6 /* InputTextField.swift */; };
+		A302620A2911ED0200E707C6 /* SignUpStep1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262092911ED0200E707C6 /* SignUpStep1ViewModel.swift */; };
+		A302620D2911EF1200E707C6 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302620C2911EF1200E707C6 /* AppContainer.swift */; };
+		A302620F2911F26F00E707C6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302620E2911F26F00E707C6 /* String.swift */; };
+		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280B83A1EB1F41BCBCB2C1A3 /* Pods-Foodly-FoodlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		55CBC6F5DFE2CD4E7A6B4ED8 /* Pods-FoodlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodlyTests.release.xcconfig"; path = "Target Support Files/Pods-FoodlyTests/Pods-FoodlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8051A37C8D424F49B6544963 /* Pods-Foodly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly.release.xcconfig"; path = "Target Support Files/Pods-Foodly/Pods-Foodly.release.xcconfig"; sourceTree = "<group>"; };
 		A30261AF2911876700E707C6 /* Foodly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30261B22911876700E707C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30261B42911876700E707C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +76,17 @@
 		A30261FA2911A21500E707C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A30261FC2911A23F00E707C6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A30262002911A3A600E707C6 /* SignUpStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1ViewController.swift; sourceTree = "<group>"; };
+		A30262022911E32500E707C6 /* SignUpStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1View.swift; sourceTree = "<group>"; };
+		A30262052911E69A00E707C6 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		A30262092911ED0200E707C6 /* SignUpStep1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1ViewModel.swift; sourceTree = "<group>"; };
+		A302620C2911EF1200E707C6 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		A302620E2911F26F00E707C6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7FEB497FA32E196CBC01DC5 /* Pods-Foodly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly.debug.xcconfig"; path = "Target Support Files/Pods-Foodly/Pods-Foodly.debug.xcconfig"; sourceTree = "<group>"; };
+		FCC6688ADC64F898EF23E4BF /* Pods-FoodlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodlyTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodlyTests/Pods-FoodlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08466F714936A5CDD1CA0CDC /* Pods_FoodlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7022A425844592C4E265731B /* Pods_Foodly_FoodlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AE5D09F357139F12B61A29D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */,
+				CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */,
+				B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A30261A62911876700E707C6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +134,8 @@
 				A30261C82911876A00E707C6 /* FoodlyTests */,
 				A30261D22911876A00E707C6 /* FoodlyUITests */,
 				A30261B02911876700E707C6 /* Products */,
+				EF47751FDEF27A3B18475B91 /* Pods */,
+				1AE5D09F357139F12B61A29D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +156,7 @@
 				A30261E32911877C00E707C6 /* Resources */,
 				A30261F92911A1D400E707C6 /* Coordinator */,
 				A30261EE29118F5C00E707C6 /* Components */,
+				A302620B2911EEFF00E707C6 /* Infrastructure */,
 				A30261E429118D2300E707C6 /* Presentation */,
 				A30261EB29118E2B00E707C6 /* Extensions */,
 				A30261EF29118F5C00E707C6 /* Protocols */,
@@ -194,6 +232,7 @@
 				A30261EC29118E3E00E707C6 /* UIImage.swift */,
 				A30261F22911903300E707C6 /* UIView.swift */,
 				A30261F7291192FC00E707C6 /* UIColor.swift */,
+				A302620E2911F26F00E707C6 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +240,7 @@
 		A30261EE29118F5C00E707C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A30262042911E66300E707C6 /* Textfields */,
 				A30261F42911925000E707C6 /* Buttons */,
 			);
 			path = Components;
@@ -243,8 +283,39 @@
 			isa = PBXGroup;
 			children = (
 				A30262002911A3A600E707C6 /* SignUpStep1ViewController.swift */,
+				A30262022911E32500E707C6 /* SignUpStep1View.swift */,
+				A30262092911ED0200E707C6 /* SignUpStep1ViewModel.swift */,
 			);
 			path = Step1;
+			sourceTree = "<group>";
+		};
+		A30262042911E66300E707C6 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				A30262052911E69A00E707C6 /* InputTextField.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		A302620B2911EEFF00E707C6 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A302620C2911EF1200E707C6 /* AppContainer.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		EF47751FDEF27A3B18475B91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7FEB497FA32E196CBC01DC5 /* Pods-Foodly.debug.xcconfig */,
+				8051A37C8D424F49B6544963 /* Pods-Foodly.release.xcconfig */,
+				D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */,
+				280B83A1EB1F41BCBCB2C1A3 /* Pods-Foodly-FoodlyUITests.release.xcconfig */,
+				FCC6688ADC64F898EF23E4BF /* Pods-FoodlyTests.debug.xcconfig */,
+				55CBC6F5DFE2CD4E7A6B4ED8 /* Pods-FoodlyTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A30261D92911876A00E707C6 /* Build configuration list for PBXNativeTarget "Foodly" */;
 			buildPhases = (
+				48AAD3A68CAC63D28114953E /* [CP] Check Pods Manifest.lock */,
 				A30261AB2911876700E707C6 /* Sources */,
 				A30261AC2911876700E707C6 /* Frameworks */,
 				A30261AD2911876700E707C6 /* Resources */,
+				4CFE19F9B95A843C1511E9A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A30261DC2911876A00E707C6 /* Build configuration list for PBXNativeTarget "FoodlyTests" */;
 			buildPhases = (
+				D77B6C85E11F5E43050857CA /* [CP] Check Pods Manifest.lock */,
 				A30261C12911876A00E707C6 /* Sources */,
 				A30261C22911876A00E707C6 /* Frameworks */,
 				A30261C32911876A00E707C6 /* Resources */,
@@ -289,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A30261DF2911876A00E707C6 /* Build configuration list for PBXNativeTarget "FoodlyUITests" */;
 			buildPhases = (
+				ACFAD1FA4E961F3A63805339 /* [CP] Check Pods Manifest.lock */,
 				A30261CB2911876A00E707C6 /* Sources */,
 				A30261CC2911876A00E707C6 /* Frameworks */,
 				A30261CD2911876A00E707C6 /* Resources */,
+				6B4CEEEE4027A1120D67B252 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,7 +403,7 @@
 				};
 			};
 			buildConfigurationList = A30261AA2911876700E707C6 /* Build configuration list for PBXProject "Foodly" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -372,22 +448,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48AAD3A68CAC63D28114953E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foodly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CFE19F9B95A843C1511E9A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foodly/Pods-Foodly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foodly/Pods-Foodly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Foodly/Pods-Foodly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B4CEEEE4027A1120D67B252 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACFAD1FA4E961F3A63805339 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foodly-FoodlyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77B6C85E11F5E43050857CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodlyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A30261AB2911876700E707C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A30261B32911876700E707C6 /* AppDelegate.swift in Sources */,
+				A302620D2911EF1200E707C6 /* AppContainer.swift in Sources */,
 				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
 				A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */,
 				A30261ED29118E3E00E707C6 /* UIImage.swift in Sources */,
+				A302620A2911ED0200E707C6 /* SignUpStep1ViewModel.swift in Sources */,
 				A30262012911A3A600E707C6 /* SignUpStep1ViewController.swift in Sources */,
 				A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */,
 				A30261FD2911A23F00E707C6 /* MainCoordinator.swift in Sources */,
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
+				A30262032911E32500E707C6 /* SignUpStep1View.swift in Sources */,
 				A30261F129118F6700E707C6 /* Stylable.swift in Sources */,
 				A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */,
 				A30261F8291192FC00E707C6 /* UIColor.swift in Sources */,
+				A302620F2911F26F00E707C6 /* String.swift in Sources */,
+				A30262062911E69A00E707C6 /* InputTextField.swift in Sources */,
 				A30261E829118D7600E707C6 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +736,7 @@
 		};
 		A30261DA2911876A00E707C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7FEB497FA32E196CBC01DC5 /* Pods-Foodly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +764,7 @@
 		};
 		A30261DB2911876A00E707C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8051A37C8D424F49B6544963 /* Pods-Foodly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -606,6 +792,7 @@
 		};
 		A30261DD2911876A00E707C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC6688ADC64F898EF23E4BF /* Pods-FoodlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -626,6 +813,7 @@
 		};
 		A30261DE2911876A00E707C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CBC6F5DFE2CD4E7A6B4ED8 /* Pods-FoodlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -646,6 +834,7 @@
 		};
 		A30261E02911876A00E707C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -664,6 +853,7 @@
 		};
 		A30261E12911876A00E707C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 280B83A1EB1F41BCBCB2C1A3 /* Pods-Foodly-FoodlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

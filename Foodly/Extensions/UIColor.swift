@@ -9,6 +9,7 @@ import UIKit
 
 extension UIColor {
     static var mainRed: UIColor { colorBuilder("mainRed") }
+    static var textFieldBorder: UIColor { colorBuilder("textFieldBorder")}
 
     static func colorBuilder(_ name: String) -> UIColor {
         UIColor(named: name) ?? .clear
