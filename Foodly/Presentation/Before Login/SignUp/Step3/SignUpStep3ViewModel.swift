@@ -19,14 +19,16 @@ protocol SignUpStep3ViewModel {
 
 class DefaultSignUpStep3ViewModel: SignUpStep3ViewModel {
     private let authUseCase: AuthUseCase
-    var userEmail: String?
-    var userPassword: String?
+    private let userUseCase: UserUseCase
+    var user = User()
+    var userPassword: String? 
     var isPasswordValid = PublishSubject<Bool>()
     var signUpHasFinished = PublishSubject<Error?>()
 
-    init(authUseCase: AuthUseCase) {
+    init(authUseCase: AuthUseCase, userUseCase: UserUseCase) {
         self.authUseCase = authUseCase
-        getEmail()
+        self.userUseCase = userUseCase
+        getInfos()
     }
 
     func checkPassword(_ text: String) {
@@ -37,13 +39,22 @@ class DefaultSignUpStep3ViewModel: SignUpStep3ViewModel {
     }
 
     func signUp() {
-        guard let userEmail = userEmail, let userPassword = userPassword else { return }
+        guard let userEmail = user.email, let userPassword = userPassword else { return }
         authUseCase.signUp(email: userEmail, password: userPassword) { [weak self] error in
+            self?.addNewUser()
+        }
+    }
+
+    private func addNewUser() {
+        let newUser = User(name: user.name, email: user.email, photo: user.photo)
+        userUseCase.saveNewUser(user: newUser.toModel()) { [weak self] error in
             self?.signUpHasFinished.onNext(error)
         }
     }
 
-    private func getEmail() {
-        userEmail = UserDefaults.standard.string(forKey: "email")
+    private func getInfos() {
+        user.name = UserDefaults.standard.string(forKey: "name")
+        user.email = UserDefaults.standard.string(forKey: "email")
+        user.photo = UserDefaults.standard.data(forKey: "photo")
     }
 }

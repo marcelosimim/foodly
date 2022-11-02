@@ -76,9 +76,9 @@ extension SignUpStep1ViewController: UIImagePickerControllerDelegate,   UINaviga
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage, let data = image.pngData() else { return }
-        viewmodel.savePhoto(data)
-        customView.userPhoto.changeImage(data)
-        dismiss(animated: true)
+            viewmodel.savePhoto(data)
+            customView.userPhoto.changeImage(data)
+            dismiss(animated: true)
     }
 
     @objc private func addPhotoPressed() {
