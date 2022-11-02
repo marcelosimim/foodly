@@ -7,20 +7,19 @@
 
 import UIKit
 
-enum Event {
-    case getStartedTapped
-    case signUpStep1Tapped
-    case signUpStep2Tapped
-    case signUpStep3Tapped
-}
-
 protocol Coordinator {
     var navigationController: UINavigationController? { get set }
 
-    func eventOccurred(with type: Event)
+    func eventOccurred(with type: EventAfterLogin)
+    func eventOccurred(with type: EventBeforeLogin)
     func start()
 }
 
 protocol Coordinating {
     var coodinator: Coordinator? { get set }
+}
+
+extension Coordinator {
+    func eventOccurred(with type: EventAfterLogin) { }
+    func eventOccurred(with type: EventBeforeLogin) { }
 }

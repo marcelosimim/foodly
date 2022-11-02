@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class BeforeLoginCoordinator: Coordinator {
     var navigationController: UINavigationController?
 
-    func eventOccurred(with type: Event) {
+    func eventOccurred(with type: EventBeforeLogin) {
         switch type {
         case .getStartedTapped:
             var vc: UIViewController & Coordinating = SignUpStep1ViewController()

@@ -24,7 +24,7 @@
 		A30261F62911926A00E707C6 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F52911926A00E707C6 /* RedButton.swift */; };
 		A30261F8291192FC00E707C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261F7291192FC00E707C6 /* UIColor.swift */; };
 		A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FA2911A21500E707C6 /* Coordinator.swift */; };
-		A30261FD2911A23F00E707C6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FC2911A23F00E707C6 /* MainCoordinator.swift */; };
+		A30261FD2911A23F00E707C6 /* BeforeLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30261FC2911A23F00E707C6 /* BeforeLoginCoordinator.swift */; };
 		A30262012911A3A600E707C6 /* SignUpStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262002911A3A600E707C6 /* SignUpStep2ViewController.swift */; };
 		A30262032911E32500E707C6 /* SignUpStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262022911E32500E707C6 /* SignUpStep2View.swift */; };
 		A30262062911E69A00E707C6 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262052911E69A00E707C6 /* InputTextField.swift */; };
@@ -51,6 +51,10 @@
 		A30262462912FA6200E707C6 /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262452912FA6200E707C6 /* UserModelBuilder.swift */; };
 		A30262482912FC8D00E707C6 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262472912FC8D00E707C6 /* UserUseCase.swift */; };
 		A302624B2912FE2800E707C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302624A2912FE2800E707C6 /* User.swift */; };
+		A302624D29130B4900E707C6 /* AfterLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302624C29130B4900E707C6 /* AfterLoginCoordinator.swift */; };
+		A302624F29130BB500E707C6 /* EventBeforeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302624E29130BB500E707C6 /* EventBeforeLogin.swift */; };
+		A302625129130BDF00E707C6 /* EventAfterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625029130BDF00E707C6 /* EventAfterLogin.swift */; };
+		A302625329130C9C00E707C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625229130C9C00E707C6 /* HomeViewController.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +98,7 @@
 		A30261F52911926A00E707C6 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		A30261F7291192FC00E707C6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A30261FA2911A21500E707C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		A30261FC2911A23F00E707C6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A30261FC2911A23F00E707C6 /* BeforeLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLoginCoordinator.swift; sourceTree = "<group>"; };
 		A30262002911A3A600E707C6 /* SignUpStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep2ViewController.swift; sourceTree = "<group>"; };
 		A30262022911E32500E707C6 /* SignUpStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep2View.swift; sourceTree = "<group>"; };
 		A30262052911E69A00E707C6 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
@@ -121,6 +125,10 @@
 		A30262452912FA6200E707C6 /* UserModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilder.swift; sourceTree = "<group>"; };
 		A30262472912FC8D00E707C6 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		A302624A2912FE2800E707C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A302624C29130B4900E707C6 /* AfterLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginCoordinator.swift; sourceTree = "<group>"; };
+		A302624E29130BB500E707C6 /* EventBeforeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBeforeLogin.swift; sourceTree = "<group>"; };
+		A302625029130BDF00E707C6 /* EventAfterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAfterLogin.swift; sourceTree = "<group>"; };
+		A302625229130C9C00E707C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 				A30262172912BEE100E707C6 /* Data */,
 				A30262182912BEE800E707C6 /* Domain */,
 				A30261E429118D2300E707C6 /* Presentation */,
+				A302623B2912F84D00E707C6 /* Enums */,
 				A30261EB29118E2B00E707C6 /* Extensions */,
 				A30262282912DBB300E707C6 /* Helpers */,
 				A30261EF29118F5C00E707C6 /* Protocols */,
@@ -248,8 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				A30262492912FDFE00E707C6 /* Models */,
-				A302622B2912DEA300E707C6 /* After Login */,
 				A30261E529118D3A00E707C6 /* Before Login */,
+				A302622B2912DEA300E707C6 /* After Login */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -313,7 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				A30261FA2911A21500E707C6 /* Coordinator.swift */,
-				A30261FC2911A23F00E707C6 /* MainCoordinator.swift */,
+				A30261FC2911A23F00E707C6 /* BeforeLoginCoordinator.swift */,
+				A302624C29130B4900E707C6 /* AfterLoginCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -368,7 +378,6 @@
 			isa = PBXGroup;
 			children = (
 				A302623E2912F9C400E707C6 /* Entities */,
-				A302623B2912F84D00E707C6 /* Enums */,
 				A30262192912BEF100E707C6 /* Repositories */,
 			);
 			path = Data;
@@ -430,6 +439,7 @@
 		A302622C2912DF0D00E707C6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A302625229130C9C00E707C6 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -456,6 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				A302623C2912F85500E707C6 /* FirebaseError.swift */,
+				A302624E29130BB500E707C6 /* EventBeforeLogin.swift */,
+				A302625029130BDF00E707C6 /* EventAfterLogin.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -747,6 +759,8 @@
 			files = (
 				A30261B32911876700E707C6 /* AppDelegate.swift in Sources */,
 				A30262482912FC8D00E707C6 /* UserUseCase.swift in Sources */,
+				A302624D29130B4900E707C6 /* AfterLoginCoordinator.swift in Sources */,
+				A302624F29130BB500E707C6 /* EventBeforeLogin.swift in Sources */,
 				A30262122912B86B00E707C6 /* SignUpStep3ViewController.swift in Sources */,
 				A30262312912E33400E707C6 /* SignUpStep1ViewController.swift in Sources */,
 				A302623D2912F85500E707C6 /* FirebaseError.swift in Sources */,
@@ -767,7 +781,7 @@
 				A302623A2912F7CC00E707C6 /* DefaultUserRepository.swift in Sources */,
 				A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */,
 				A30262362912E6E200E707C6 /* UserPhoto.swift in Sources */,
-				A30261FD2911A23F00E707C6 /* MainCoordinator.swift in Sources */,
+				A30261FD2911A23F00E707C6 /* BeforeLoginCoordinator.swift in Sources */,
 				A30262142912B95400E707C6 /* SignUpStep3View.swift in Sources */,
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
 				A30262382912F77900E707C6 /* UserRepository.swift in Sources */,
@@ -775,8 +789,10 @@
 				A302622F2912E32A00E707C6 /* SignUpStep1View.swift in Sources */,
 				A30261F129118F6700E707C6 /* Stylable.swift in Sources */,
 				A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */,
+				A302625129130BDF00E707C6 /* EventAfterLogin.swift in Sources */,
 				A30261F8291192FC00E707C6 /* UIColor.swift in Sources */,
 				A302620F2911F26F00E707C6 /* String.swift in Sources */,
+				A302625329130C9C00E707C6 /* HomeViewController.swift in Sources */,
 				A302624B2912FE2800E707C6 /* User.swift in Sources */,
 				A302621D2912BF1300E707C6 /* AuthRepository.swift in Sources */,
 				A30262062911E69A00E707C6 /* InputTextField.swift in Sources */,
