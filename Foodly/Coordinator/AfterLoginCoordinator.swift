@@ -15,7 +15,7 @@ class AfterLoginCoordinator: Coordinator {
     }
 
     func start() {
-        var vc: UIViewController & Coordinating = HomeViewController()
+        var vc: UIViewController & Coordinating = AfterLoginViewController()
         vc.coodinator = self
         navigationController?.setViewControllers([vc], animated: false)
     }

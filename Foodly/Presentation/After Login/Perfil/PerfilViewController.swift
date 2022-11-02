@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  PerfilViewController.swift
 //  Foodly
 //
 //  Created by Marcelo Simim Santos on 11/2/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, Coordinating {
+class PerfilViewController: UIViewController, Coordinating {
     var coodinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .orange
     }
 }

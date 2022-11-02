@@ -54,7 +54,10 @@
 		A302624D29130B4900E707C6 /* AfterLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302624C29130B4900E707C6 /* AfterLoginCoordinator.swift */; };
 		A302624F29130BB500E707C6 /* EventBeforeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302624E29130BB500E707C6 /* EventBeforeLogin.swift */; };
 		A302625129130BDF00E707C6 /* EventAfterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625029130BDF00E707C6 /* EventAfterLogin.swift */; };
-		A302625329130C9C00E707C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625229130C9C00E707C6 /* HomeViewController.swift */; };
+		A302625329130C9C00E707C6 /* AfterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625229130C9C00E707C6 /* AfterLoginViewController.swift */; };
+		A302625A29130FF900E707C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625929130FF900E707C6 /* HomeViewController.swift */; };
+		A302625C2913101800E707C6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625B2913101800E707C6 /* SearchViewController.swift */; };
+		A302625E2913102E00E707C6 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302625D2913102E00E707C6 /* PerfilViewController.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,7 +131,10 @@
 		A302624C29130B4900E707C6 /* AfterLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginCoordinator.swift; sourceTree = "<group>"; };
 		A302624E29130BB500E707C6 /* EventBeforeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBeforeLogin.swift; sourceTree = "<group>"; };
 		A302625029130BDF00E707C6 /* EventAfterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAfterLogin.swift; sourceTree = "<group>"; };
-		A302625229130C9C00E707C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A302625229130C9C00E707C6 /* AfterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginViewController.swift; sourceTree = "<group>"; };
+		A302625929130FF900E707C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A302625B2913101800E707C6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A302625D2913102E00E707C6 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -431,17 +437,20 @@
 		A302622B2912DEA300E707C6 /* After Login */ = {
 			isa = PBXGroup;
 			children = (
-				A302622C2912DF0D00E707C6 /* Home */,
+				A302625829130FED00E707C6 /* Perfil */,
+				A302625729130FE800E707C6 /* Search */,
+				A302625629130FE500E707C6 /* Home */,
+				A302622C2912DF0D00E707C6 /* Tab */,
 			);
 			path = "After Login";
 			sourceTree = "<group>";
 		};
-		A302622C2912DF0D00E707C6 /* Home */ = {
+		A302622C2912DF0D00E707C6 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				A302625229130C9C00E707C6 /* HomeViewController.swift */,
+				A302625229130C9C00E707C6 /* AfterLoginViewController.swift */,
 			);
-			path = Home;
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		A302622D2912E2E600E707C6 /* Step1 */ = {
@@ -503,6 +512,30 @@
 				A302624A2912FE2800E707C6 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A302625629130FE500E707C6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A302625929130FF900E707C6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A302625729130FE800E707C6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A302625B2913101800E707C6 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A302625829130FED00E707C6 /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				A302625D2913102E00E707C6 /* PerfilViewController.swift */,
+			);
+			path = Perfil;
 			sourceTree = "<group>";
 		};
 		EF47751FDEF27A3B18475B91 /* Pods */ = {
@@ -786,13 +819,16 @@
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
 				A30262382912F77900E707C6 /* UserRepository.swift in Sources */,
 				A30262032911E32500E707C6 /* SignUpStep2View.swift in Sources */,
+				A302625E2913102E00E707C6 /* PerfilViewController.swift in Sources */,
 				A302622F2912E32A00E707C6 /* SignUpStep1View.swift in Sources */,
 				A30261F129118F6700E707C6 /* Stylable.swift in Sources */,
 				A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */,
 				A302625129130BDF00E707C6 /* EventAfterLogin.swift in Sources */,
 				A30261F8291192FC00E707C6 /* UIColor.swift in Sources */,
 				A302620F2911F26F00E707C6 /* String.swift in Sources */,
-				A302625329130C9C00E707C6 /* HomeViewController.swift in Sources */,
+				A302625329130C9C00E707C6 /* AfterLoginViewController.swift in Sources */,
+				A302625C2913101800E707C6 /* SearchViewController.swift in Sources */,
+				A302625A29130FF900E707C6 /* HomeViewController.swift in Sources */,
 				A302624B2912FE2800E707C6 /* User.swift in Sources */,
 				A302621D2912BF1300E707C6 /* AuthRepository.swift in Sources */,
 				A30262062911E69A00E707C6 /* InputTextField.swift in Sources */,
