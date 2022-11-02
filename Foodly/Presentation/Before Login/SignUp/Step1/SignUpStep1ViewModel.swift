@@ -13,19 +13,21 @@ protocol SignUpStep1ViewModel {
     var isEmailValid: PublishSubject<Bool> { get }
 
     func saveEmail()
-    func checkEmail(_ email: String)
+    func checkEmail(_ text: String)
 }
 
 class DefaultSignUpStep1ViewModel: SignUpStep1ViewModel {
-    let disposeBag = DisposeBag()
-    var email = ""
+    var userEmail = ""
     var isEmailValid = PublishSubject<Bool>()
 
-    func checkEmail(_ email: String) {
-        isEmailValid.onNext(email.isValidEmail())
+    func checkEmail(_ text: String) {
+        let isValid = text.isValidEmail()
+
+        userEmail = isValid ? text : ""
+        isEmailValid.onNext(isValid)
     }
 
     func saveEmail() {
-        UserDefaults.standard.set(email, forKey: "email")
+        UserDefaults.standard.set(userEmail, forKey: "email")
     }
 }

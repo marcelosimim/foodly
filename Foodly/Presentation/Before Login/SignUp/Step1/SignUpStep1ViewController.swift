@@ -42,9 +42,11 @@ class SignUpStep1ViewController: UIViewController, Coordinating {
     }
 
     private func viewModelBinds() {
-        viewmodel.isEmailValid.subscribe(onNext: { [weak self] isValid in
-            self?.customView.inputTextField.arrowButton.isEnabled = isValid
-        }).disposed(by: disposeBag)
+        let arrowButton = customView.inputTextField.arrowButton
+
+        viewmodel.isEmailValid.bind { isValid in
+            arrowButton.isEnabled = isValid
+        }.disposed(by: disposeBag)
     }
 }
 

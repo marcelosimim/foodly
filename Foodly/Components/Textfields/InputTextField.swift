@@ -13,7 +13,6 @@ enum InputTextFieldType {
 }
 
 class InputTextField: UIView {
-    private let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 5)
     let textField = UITextField()
     let clearButton = UIButton()
     let arrowButton = UIButton()
