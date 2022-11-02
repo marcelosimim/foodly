@@ -19,7 +19,7 @@ class SignUpStep1ViewController: UIViewController, Coordinating {
         setupButtons()
         view = customView
         customView.setup()
-        customView.inputTextField.delegate = self
+        customView.inputTextField.textField.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,7 @@ class SignUpStep1ViewController: UIViewController, Coordinating {
     }
 
     @objc private func clearPressed() {
-        customView.inputTextField.text = ""
+        customView.inputTextField.textField.text = ""
         viewmodel.checkEmail("")
     }
 

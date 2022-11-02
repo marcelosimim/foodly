@@ -7,28 +7,67 @@
 
 import UIKit
 
-class InputTextField: UITextField {
+enum InputTextFieldType {
+    case email
+    case password
+}
+
+class InputTextField: UIView {
+    private let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 5)
+    let textField = UITextField()
     let clearButton = UIButton()
     let arrowButton = UIButton()
-    let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 5)
 
     override func layoutSubviews() {
         super.layoutSubviews()
         setupStyles()
         addViews()
+        setupLayer()
+    }
+
+    // MARK: - type methods
+
+    func setup(type: InputTextFieldType) {
+        switch type {
+        case .email:
+            setupAsEmail()
+        case .password:
+            setupAsPassword()
+        }
+    }
+
+    private func setupAsEmail() {
+        textField.keyboardType = .emailAddress
+        textField.autocapitalizationType = .none
+    }
+
+    private func setupAsPassword() {
+        textField.keyboardType = .default
+        textField.isSecureTextEntry = true
+    }
+
+    // MARK: - view methods
+
+    private func setupLayer() {
         layer.borderWidth = 1
         layer.cornerRadius = 10
+        arrowButton.isEnabled = false
     }
 
     private func addViews() {
-        addSubviews([clearButton, arrowButton])
+        addSubviews([textField, clearButton, arrowButton])
         setupConstraints()
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
+            textField.centerYAnchor.constraint(equalTo: centerYAnchor),
+            textField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
+            textField.trailingAnchor.constraint(equalTo: clearButton.leadingAnchor, constant: -10),
+
             clearButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            clearButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -84),
+            clearButton.trailingAnchor.constraint(equalTo: arrowButton.leadingAnchor, constant: -24),
+            clearButton.widthAnchor.constraint(equalToConstant: 22),
 
             arrowButton.topAnchor.constraint(equalTo: topAnchor, constant: 3),
             arrowButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3),
@@ -47,26 +86,12 @@ extension InputTextField: Stylable {
     }
 
     func setupTexts() {
-        placeholder = "youremailaddress.com"
+        textField.placeholder = "youremail@address.com"
     }
 
     func setupImages() {
         clearButton.setImage(.xmarkCircle, for: .normal)
         arrowButton.setImage(.rightArrowNative, for: .normal)
         arrowButton.layer.cornerRadius = 8
-    }
-}
-
-extension InputTextField {
-    override open func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-
-    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-
-    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
     }
 }

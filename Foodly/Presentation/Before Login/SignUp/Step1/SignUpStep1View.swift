@@ -15,7 +15,7 @@ class SignUpStep1View: UIView {
     func setup() {
         setupStyles()
         addViews()
-        inputTextField.arrowButton.isEnabled = false
+        inputTextField.setup(type: .email)
     }
 
     private func addViews() {
