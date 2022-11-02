@@ -11,6 +11,7 @@ enum Event {
     case getStartedTapped
     case signUpStep1Tapped
     case signUpStep2Tapped
+    case signUpStep3Tapped
 }
 
 protocol Coordinator {

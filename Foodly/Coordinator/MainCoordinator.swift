@@ -21,6 +21,10 @@ class MainCoordinator: Coordinator {
             vc.coodinator = self
             navigationController?.pushViewController(vc, animated: true)
         case .signUpStep2Tapped:
+            var vc: UIViewController & Coordinating = SignUpStep3ViewController()
+            vc.coodinator = self
+            navigationController?.pushViewController(vc, animated: true)
+        case .signUpStep3Tapped:
             break
         }
     }

@@ -17,7 +17,8 @@ class AppContainer {
         container.register(AuthUseCase.self) { r in DefaultAuthUseCase(authRepository: r.resolve(AuthRepository.self)!) }
         // MARK: - ViewModels
         container.register(SignUpStep1ViewModel.self) { _ in DefaultSignUpStep1ViewModel()}
-        container.register(SignUpStep2ViewModel.self) { r in DefaultSignUpStep2ViewModel(authUseCase: r.resolve(AuthUseCase.self)!)}
+        container.register(SignUpStep2ViewModel.self) { _ in DefaultSignUpStep2ViewModel()}
+        container.register(SignUpStep3ViewModel.self) { r in DefaultSignUpStep3ViewModel(authUseCase: r.resolve(AuthUseCase.self)!)}
         return container
     }()
 }

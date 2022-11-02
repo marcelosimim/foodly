@@ -12,7 +12,8 @@ extension UIImage {
     static var rightArrow: UIImage { imageBuilder("rightArrow") }
     static var rightArrowNative: UIImage { UIImage(systemName: "arrow.right")! }
     static var signup1: UIImage { imageBuilder("signup1") }
-    static var signup2: UIImage { imageBuilder("signup2")}
+    static var signup2: UIImage { imageBuilder("signup2") }
+    static var signup3: UIImage { imageBuilder("signup3")}
     static var xmarkCircle: UIImage { imageBuilder("xmark.circle")}
 
     static func imageBuilder(_ name: String) -> UIImage {

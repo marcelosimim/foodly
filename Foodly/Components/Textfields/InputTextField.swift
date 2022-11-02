@@ -8,6 +8,7 @@
 import UIKit
 
 enum InputTextFieldType {
+    case name
     case email
     case password
 }
@@ -32,6 +33,8 @@ class InputTextField: UIView {
             setupAsEmail()
         case .password:
             setupAsPassword()
+        case .name:
+            setupAsName()
         }
     }
 
@@ -45,6 +48,10 @@ class InputTextField: UIView {
         textField.keyboardType = .default
         textField.isSecureTextEntry = true
         textField.placeholder = "Minimum 8 characters"
+    }
+
+    private func setupAsName() {
+        textField.keyboardType = .default
     }
 
     // MARK: - view methods

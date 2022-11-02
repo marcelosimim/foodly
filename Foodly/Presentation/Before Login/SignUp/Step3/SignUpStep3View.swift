@@ -1,38 +1,38 @@
 //
-//  SignUpStep2View.swift
+//  SignUpStep3View.swift
 //  Foodly
 //
-//  Created by Marcelo Simim Santos on 11/1/22.
+//  Created by Marcelo Simim Santos on 11/2/22.
 //
 
 import UIKit
 
-class SignUpStep2View: UIView {
+class SignUpStep3View: UIView {
     private let backgroundImage = UIImageView()
-    private let emailLabel = UILabel()
+    private let passwordLabel = UILabel()
     let inputTextField = InputTextField()
 
     func setup() {
         setupStyles()
         addViews()
-        inputTextField.setup(type: .email)
+        inputTextField.setup(type: .password)
     }
 
     private func addViews() {
-        addSubviews([backgroundImage, emailLabel, inputTextField])
+        addSubviews([backgroundImage, passwordLabel, inputTextField])
         setupConstraints()
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            backgroundImage.topAnchor.constraint(equalTo: topAnchor, constant: 60),
+            backgroundImage.topAnchor.constraint(equalTo: topAnchor),
             backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
 
-            emailLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            passwordLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            passwordLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
 
-            inputTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 24),
+            inputTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 24),
             inputTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             inputTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             inputTextField.heightAnchor.constraint(equalToConstant: 61)
@@ -40,21 +40,21 @@ class SignUpStep2View: UIView {
     }
 }
 
-extension SignUpStep2View: Stylable {
+extension SignUpStep3View: Stylable {
     func setupColors() {
         backgroundColor = .white
     }
 
     func setupImages() {
-        backgroundImage.image = .signup2
+        backgroundImage.image = .signup3
     }
 
     func setupTexts() {
-        emailLabel.text = "What's your email address?"
+        passwordLabel.text = "Create your account password"
     }
 
     func setupFonts() {
-        emailLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        passwordLabel.font = .systemFont(ofSize: 20, weight: .semibold)
     }
 }
 
