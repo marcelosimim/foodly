@@ -6,6 +6,9 @@ target 'Foodly' do
   use_frameworks!
 
   # Pods for Foodly
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'Firebase/Storage'
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'Swinject'
