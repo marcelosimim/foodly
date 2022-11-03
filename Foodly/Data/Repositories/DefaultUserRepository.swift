@@ -36,4 +36,29 @@ class DefaultUserRepository: UserRepository {
                 completion(error)
             }
     }
+
+    func getUserName(completion: @escaping(Result<String, Error>) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else { return }
+        userCollectionRef.document(currentUser.uid)
+            .getDocument { document, error in
+                guard let document = document, let userName = document["name"] as? String else {
+                    completion(.failure(error!))
+                    return
+                }
+
+                completion(.success(userName))
+            }
+    }
+
+    func getUserPhoto(completion: @escaping(Result<Data, Error>) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else { return }
+        userStorageRef.reference(withPath: "users/\(currentUser.uid)/perfil.png")
+            .getData(maxSize: 4 * 1024 * 1024) { data, error in
+                guard let data = data else {
+                    completion(.failure(error!))
+                    return
+                }
+                completion(.success(data))
+            }
+    }
 }

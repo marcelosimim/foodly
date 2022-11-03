@@ -72,29 +72,6 @@ class PerfilTableViewCell: UITableViewCell {
             self?.stack.backgroundColor = .white
         }
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        if selected {
-//            switch type {
-//            case .favorites:
-//                contentView.backgroundColor = .cellRedBackground
-//            case .payments:
-//                contentView.backgroundColor = .cellBlueBackground
-//            case .help:
-//                contentView.backgroundColor = .cellGreenBackground
-//            case .promotions:
-//                contentView.backgroundColor = .cellPurpleBackground
-//            case .notifications:
-//                contentView.backgroundColor = .cellYellowBackground
-//            case .deliveryWith:
-//                contentView.backgroundColor = .cellDarkBlueBackground
-//            case .none:
-//                contentView.backgroundColor = .white
-//            }
-//        } else {
-//            contentView.backgroundColor = .white
-//        }
-//    }
 }
 
 extension PerfilTableViewCell: Stylable {
@@ -103,7 +80,6 @@ extension PerfilTableViewCell: Stylable {
     }
 
     func setupColors() {
-        // stack.backgroundColor = .white
         backgroundColor = .clear
         titleLabel.textColor = .black
     }

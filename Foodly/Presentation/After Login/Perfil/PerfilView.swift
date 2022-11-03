@@ -8,9 +8,9 @@
 import UIKit
 
 class PerfilView: UIView {
-    private let userPhoto = UserPhoto()
-    private let nameLabel = UILabel()
-    private let viewAccountButton = UIButton()
+    let userPhoto = UserPhoto()
+    let nameLabel = UILabel()
+    let viewAccountButton = UIButton()
     private lazy var userInfoStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [nameLabel, viewAccountButton])
         stack.axis = .vertical
@@ -78,7 +78,6 @@ extension PerfilView: Stylable {
     }
 
     func setupTexts() {
-        nameLabel.text = "Jack Hawkins"
         viewAccountButton.setTitle("View Account", for: .normal)
         blackButton.setup(title: "View Basket")
     }
