@@ -59,11 +59,10 @@ class UserPhoto: UIView {
             addPhotoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             addPhotoLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
-        setupLayer()
     }
 
-    private func setupLayer() {
-        layer.cornerRadius = 250/2
+    func setupLayer(size: CGFloat) {
+        layer.cornerRadius = size/2
         clipsToBounds = true
     }
 }

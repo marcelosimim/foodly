@@ -45,6 +45,7 @@ class SignUpStep1View: UIView {
             backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
+        userPhoto.setupLayer(size: 250)
     }
 }
 

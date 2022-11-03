@@ -18,6 +18,13 @@ extension UIImage {
     static var homeIcon: UIImage { UIImage(systemName:"house.fill")! }
     static var search: UIImage { UIImage(systemName:"magnifyingglass")! }
     static var perfil: UIImage { UIImage(systemName:"person.fill")! }
+    static var covidBanner: UIImage { imageBuilder("covidBanner") }
+    static var favoriteIcon: UIImage { imageBuilder("favoriteIcon") }
+    static var paymentIcon: UIImage { imageBuilder("paymentIcon") }
+    static var helpIcon: UIImage { imageBuilder("helpIcon") }
+    static var promotionIcon: UIImage { imageBuilder("promotionIcon") }
+    static var notificationIcon: UIImage { imageBuilder("notificationIcon") }
+    static var deliveryIcon: UIImage { imageBuilder("deliveryIcon") }
 
     static func imageBuilder(_ name: String) -> UIImage {
         UIImage(named: name) ?? UIImage(systemName: "xmark.octagon.fill")!
