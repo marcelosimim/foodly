@@ -67,6 +67,7 @@
 		A302626D2914492600E707C6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626C2914492600E707C6 /* HomeView.swift */; };
 		A302627029144BC000E707C6 /* EnjoyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626F29144BC000E707C6 /* EnjoyCard.swift */; };
 		A302627229147C8000E707C6 /* EnjoyCardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302627129147C8000E707C6 /* EnjoyCardDetails.swift */; };
+		A30262762915DB8400E707C6 /* EnjoyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262752915DB8400E707C6 /* EnjoyDetailsViewController.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		A302626C2914492600E707C6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A302626F29144BC000E707C6 /* EnjoyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyCard.swift; sourceTree = "<group>"; };
 		A302627129147C8000E707C6 /* EnjoyCardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyCardDetails.swift; sourceTree = "<group>"; };
+		A30262752915DB8400E707C6 /* EnjoyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyDetailsViewController.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 		A302625629130FE500E707C6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A30262742915DB7200E707C6 /* EnjoyDetails */,
 				A302625929130FF900E707C6 /* HomeViewController.swift */,
 				A302626C2914492600E707C6 /* HomeView.swift */,
 			);
@@ -579,6 +582,14 @@
 				A302627129147C8000E707C6 /* EnjoyCardDetails.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		A30262742915DB7200E707C6 /* EnjoyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A30262752915DB8400E707C6 /* EnjoyDetailsViewController.swift */,
+			);
+			path = EnjoyDetails;
 			sourceTree = "<group>";
 		};
 		EF47751FDEF27A3B18475B91 /* Pods */ = {
@@ -863,6 +874,7 @@
 				A302626B2913441300E707C6 /* PerfilTableViewCellType.swift in Sources */,
 				A302623A2912F7CC00E707C6 /* DefaultUserRepository.swift in Sources */,
 				A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */,
+				A30262762915DB8400E707C6 /* EnjoyDetailsViewController.swift in Sources */,
 				A30262362912E6E200E707C6 /* UserPhoto.swift in Sources */,
 				A30261FD2911A23F00E707C6 /* BeforeLoginCoordinator.swift in Sources */,
 				A30262142912B95400E707C6 /* SignUpStep3View.swift in Sources */,

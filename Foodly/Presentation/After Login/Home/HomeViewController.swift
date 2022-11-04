@@ -26,11 +26,17 @@ class HomeViewController: UIViewController, Coordinating {
 
     private func bindActions() {
         customView.enjoyCard1.seeDetailsButton.rx.tap.bind { [weak self] _ in
-            let vc =   UIViewController()
-            vc.view  = EnjoyCardDetails()
+            let vc = EnjoyDetailsViewController()
+            vc.discountLabel = "Enjoy 25% Off (upto US $7)"
             self?.modalPresentationStyle = .currentContext
             self?.present(vc, animated: true)
-            // self?.customView.enjoyDetails.isHidden.toggle()
+        }.disposed(by: disposeBag)
+
+        customView.enjoyCard2.seeDetailsButton.rx.tap.bind { [weak self] _ in
+            let vc = EnjoyDetailsViewController()
+            vc.discountLabel = "Enjoy 35% Off(upto US $12)"
+            self?.modalPresentationStyle = .currentContext
+            self?.present(vc, animated: true)
         }.disposed(by: disposeBag)
     }
 }

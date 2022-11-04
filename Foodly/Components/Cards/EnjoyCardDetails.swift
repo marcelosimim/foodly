@@ -20,6 +20,10 @@ class EnjoyCardDetails: UIView {
         addViews()
     }
 
+    func setupDiscountLabel(_ text: String) {
+        secondLabel.text = text
+    }
+
     private func addViews() {
         addSubviews([imageView, firstLabel, secondLabel, thirdLabel, happyFoodlyButton])
         setupConstraints()
@@ -44,7 +48,6 @@ class EnjoyCardDetails: UIView {
             happyFoodlyButton.topAnchor.constraint(equalTo: thirdLabel.bottomAnchor, constant: 32),
             happyFoodlyButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             happyFoodlyButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 58),
-            //happyFoodlyButton.bottomAnchor.constraint(equalTo: bottomAnchor)
             happyFoodlyButton.heightAnchor.constraint(equalToConstant: 60),
         ])
 
@@ -57,8 +60,6 @@ extension EnjoyCardDetails: Stylable {
         secondLabel.textColor = .black
         thirdLabel.textColor = .black
         backgroundColor  = .white
-//        happyFoodlyButton.backgroundColor = .mainRed
-//        happyFoodlyButton.setTitleColor(.white, for: .normal)
     }
 
     func setupImages() {
@@ -69,17 +70,15 @@ extension EnjoyCardDetails: Stylable {
 
     func setupTexts() {
         firstLabel.text = "Your first 2 orders"
-        secondLabel.text = "Enjoy 25% off ( up to us $7)"
         thirdLabel.text = "Welcome to Foodly! Here's a little something for you first order"
+        thirdLabel.textAlignment = .center
         thirdLabel.numberOfLines = 0
         happyFoodlyButton.setupTitle(title: "Happy Foodly")
-        // happyFoodlyButton.setupRightIcon(icon: .checkmark)
     }
 
     func setupFonts() {
         firstLabel.font = .systemFont(ofSize: 16, weight: .bold)
         secondLabel.font = .systemFont(ofSize: 23, weight: .bold)
         thirdLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        // happyFoodlyButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
     }
 }

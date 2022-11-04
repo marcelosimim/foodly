@@ -79,8 +79,8 @@ extension EnjoyCard: Stylable {
     }
 
     func setupTexts() {
-        mainLabel.font = .systemFont(ofSize: 16, weight: .semibold)
-        secondLabel.font = .systemFont(ofSize: 12, weight: .medium)
+        mainLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        secondLabel.font = .systemFont(ofSize: 10, weight: .medium)
         seeDetailsButton.setTitle("See details", for: .normal)
     }
 
