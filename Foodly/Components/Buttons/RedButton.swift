@@ -23,11 +23,18 @@ class RedButton: UIButton {
 
     func setupRightIcon(icon: UIImage) {
         iconView.image = icon
+        iconView.contentMode = .scaleAspectFit
     }
 
     private func addViews() {
         addSubviews([iconView])
+        guard let titleLabel = titleLabel else { return }
         NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+
+            iconView.topAnchor.constraint(equalTo: topAnchor),
+            iconView.bottomAnchor.constraint(equalTo: bottomAnchor),
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
             iconView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
         ])
@@ -38,9 +45,11 @@ class RedButton: UIButton {
 extension RedButton: Stylable {
     func setupColors() {
         backgroundColor = .mainRed
+        iconView.tintColor = .white
     }
 
     func setupFonts() {
-        titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        titleLabel?.adjustsFontSizeToFitWidth = true
     }
 }

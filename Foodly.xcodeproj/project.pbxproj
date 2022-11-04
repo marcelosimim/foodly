@@ -64,6 +64,9 @@
 		A3026267291339FE00E707C6 /* PerfilTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3026266291339FE00E707C6 /* PerfilTableViewCellModel.swift */; };
 		A302626929133D2800E707C6 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626829133D2800E707C6 /* BlackButton.swift */; };
 		A302626B2913441300E707C6 /* PerfilTableViewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626A2913441300E707C6 /* PerfilTableViewCellType.swift */; };
+		A302626D2914492600E707C6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626C2914492600E707C6 /* HomeView.swift */; };
+		A302627029144BC000E707C6 /* EnjoyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626F29144BC000E707C6 /* EnjoyCard.swift */; };
+		A302627229147C8000E707C6 /* EnjoyCardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302627129147C8000E707C6 /* EnjoyCardDetails.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +150,9 @@
 		A3026266291339FE00E707C6 /* PerfilTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewCellModel.swift; sourceTree = "<group>"; };
 		A302626829133D2800E707C6 /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		A302626A2913441300E707C6 /* PerfilTableViewCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewCellType.swift; sourceTree = "<group>"; };
+		A302626C2914492600E707C6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A302626F29144BC000E707C6 /* EnjoyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyCard.swift; sourceTree = "<group>"; };
+		A302627129147C8000E707C6 /* EnjoyCardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyCardDetails.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 		A30261EE29118F5C00E707C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A302626E29144BB200E707C6 /* Cards */,
 				A3026261291335E500E707C6 /* Cells */,
 				A30262342912E6AC00E707C6 /* Images */,
 				A30262042911E66300E707C6 /* Textfields */,
@@ -534,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				A302625929130FF900E707C6 /* HomeViewController.swift */,
+				A302626C2914492600E707C6 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -562,6 +570,15 @@
 				A30262622913361400E707C6 /* PerfilTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A302626E29144BB200E707C6 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				A302626F29144BC000E707C6 /* EnjoyCard.swift */,
+				A302627129147C8000E707C6 /* EnjoyCardDetails.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		EF47751FDEF27A3B18475B91 /* Pods */ = {
@@ -819,6 +836,8 @@
 				A3026267291339FE00E707C6 /* PerfilTableViewCellModel.swift in Sources */,
 				A30261B32911876700E707C6 /* AppDelegate.swift in Sources */,
 				A30262482912FC8D00E707C6 /* UserUseCase.swift in Sources */,
+				A302627029144BC000E707C6 /* EnjoyCard.swift in Sources */,
+				A302626D2914492600E707C6 /* HomeView.swift in Sources */,
 				A302624D29130B4900E707C6 /* AfterLoginCoordinator.swift in Sources */,
 				A302624F29130BB500E707C6 /* EventBeforeLogin.swift in Sources */,
 				A30262122912B86B00E707C6 /* SignUpStep3ViewController.swift in Sources */,
@@ -832,6 +851,7 @@
 				A30262332912E4C400E707C6 /* SignUpStep1ViewModel.swift in Sources */,
 				A30262432912FA1500E707C6 /* UserModel.swift in Sources */,
 				A302622A2912DBEC00E707C6 /* Alert.swift in Sources */,
+				A302627229147C8000E707C6 /* EnjoyCardDetails.swift in Sources */,
 				A30262242912C11B00E707C6 /* AuthUseCase.swift in Sources */,
 				A30261ED29118E3E00E707C6 /* UIImage.swift in Sources */,
 				A30262462912FA6200E707C6 /* UserModelBuilder.swift in Sources */,

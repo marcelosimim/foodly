@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import RxCocoa
 import UIKit
 
 class SignUpStep1ViewController: UIViewController, Coordinating {
