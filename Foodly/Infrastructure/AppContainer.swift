@@ -22,6 +22,7 @@ class AppContainer {
         container.register(SignUpStep2ViewModel.self) { _ in DefaultSignUpStep2ViewModel()}
         container.register(SignUpStep3ViewModel.self) { r in DefaultSignUpStep3ViewModel(authUseCase: r.resolve(AuthUseCase.self)!, userUseCase: r.resolve(UserUseCase.self)!)}
         container.register(PerfilViewModel.self) { r in DefaultPerfilViewModel(userUseCase: r.resolve(UserUseCase.self)! ) }
+        container.register(HomeViewModel.self) { _ in DefaultHomeViewModel() }
         return container
     }()
 }

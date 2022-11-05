@@ -8,14 +8,19 @@
 import UIKit
 
 class HomeView: UIView {
+    private let scrollView = UIScrollView()
+    private let scrollViewContent = UIView()
     let sortAndFilterButton = UIButton()
     let enjoyCard1 = EnjoyCard()
     let enjoyCard2 = EnjoyCard()
-//    let enjoyDetails: EnjoyCardDetails = {
-//        let enjoyDetails = EnjoyCardDetails()
-//        enjoyDetails.isHidden = true
-//        return enjoyDetails
-//    }()
+    let filtersCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(FiltersCollectionViewCell.self, forCellWithReuseIdentifier: FiltersCollectionViewCell.identifier)
+        collection.showsHorizontalScrollIndicator = false
+        return collection
+    }()
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -24,27 +29,43 @@ class HomeView: UIView {
     }
 
     private func addViews() {
-        addSubviews([sortAndFilterButton, enjoyCard1, enjoyCard2])
+        addSubviews([scrollView])
+        scrollView.addSubviews([scrollViewContent])
+        scrollViewContent.addSubviews([sortAndFilterButton, filtersCollectionView , enjoyCard1, enjoyCard2])
         setupConstraints()
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            sortAndFilterButton.topAnchor.constraint(equalTo: topAnchor, constant: 94),
-            sortAndFilterButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            scrollView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            scrollView.widthAnchor.constraint(equalTo: widthAnchor),
+            scrollView.topAnchor.constraint(equalTo: topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
+            scrollViewContent.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            scrollViewContent.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            scrollViewContent.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            scrollViewContent.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+
+            sortAndFilterButton.topAnchor.constraint(equalTo: scrollViewContent.topAnchor),
+            sortAndFilterButton.leadingAnchor.constraint(equalTo: scrollViewContent.leadingAnchor, constant: 16),
+
+            filtersCollectionView.centerYAnchor.constraint(equalTo: sortAndFilterButton.centerYAnchor),
+            filtersCollectionView.leadingAnchor.constraint(equalTo: sortAndFilterButton.trailingAnchor, constant: 8),
+            filtersCollectionView.trailingAnchor.constraint(equalTo: scrollViewContent.trailingAnchor),
+            filtersCollectionView.heightAnchor.constraint(equalToConstant: 34),
 
             enjoyCard1.topAnchor.constraint(equalTo: sortAndFilterButton.bottomAnchor, constant: 26),
-            enjoyCard1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            enjoyCard1.leadingAnchor.constraint(equalTo: scrollViewContent.leadingAnchor, constant: 16),
             enjoyCard1.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width-32-24)/2),
 
             enjoyCard2.topAnchor.constraint(equalTo: enjoyCard1.topAnchor),
-            enjoyCard2.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            enjoyCard2.trailingAnchor.constraint(equalTo: scrollViewContent.trailingAnchor, constant: -16),
             enjoyCard2.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width-32-24)/2),
 
-//            enjoyDetails.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -150),
-//            enjoyDetails.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            enjoyDetails.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            enjoyDetails.heightAnchor.constraint(equalToConstant: 414),
+
+
+            enjoyCard2.bottomAnchor.constraint(equalTo: scrollViewContent.bottomAnchor)
         ])
     }
 }

@@ -68,6 +68,8 @@
 		A302627029144BC000E707C6 /* EnjoyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302626F29144BC000E707C6 /* EnjoyCard.swift */; };
 		A302627229147C8000E707C6 /* EnjoyCardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302627129147C8000E707C6 /* EnjoyCardDetails.swift */; };
 		A30262762915DB8400E707C6 /* EnjoyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262752915DB8400E707C6 /* EnjoyDetailsViewController.swift */; };
+		A30262782915E2BB00E707C6 /* FiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */; };
+		A302627C2915EEEE00E707C6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302627B2915EEEE00E707C6 /* HomeViewModel.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +157,8 @@
 		A302626F29144BC000E707C6 /* EnjoyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyCard.swift; sourceTree = "<group>"; };
 		A302627129147C8000E707C6 /* EnjoyCardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyCardDetails.swift; sourceTree = "<group>"; };
 		A30262752915DB8400E707C6 /* EnjoyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyDetailsViewController.swift; sourceTree = "<group>"; };
+		A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewCell.swift; sourceTree = "<group>"; };
+		A302627B2915EEEE00E707C6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -545,6 +549,7 @@
 				A30262742915DB7200E707C6 /* EnjoyDetails */,
 				A302625929130FF900E707C6 /* HomeViewController.swift */,
 				A302626C2914492600E707C6 /* HomeView.swift */,
+				A302627B2915EEEE00E707C6 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 			isa = PBXGroup;
 			children = (
 				A30262622913361400E707C6 /* PerfilTableViewCell.swift */,
+				A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -876,6 +882,7 @@
 				A30261EA29118D9B00E707C6 /* GetStartedView.swift in Sources */,
 				A30262762915DB8400E707C6 /* EnjoyDetailsViewController.swift in Sources */,
 				A30262362912E6E200E707C6 /* UserPhoto.swift in Sources */,
+				A30262782915E2BB00E707C6 /* FiltersCollectionViewCell.swift in Sources */,
 				A30261FD2911A23F00E707C6 /* BeforeLoginCoordinator.swift in Sources */,
 				A30262142912B95400E707C6 /* SignUpStep3View.swift in Sources */,
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
@@ -893,6 +900,7 @@
 				A302625C2913101800E707C6 /* SearchViewController.swift in Sources */,
 				A302625A29130FF900E707C6 /* HomeViewController.swift in Sources */,
 				A302624B2912FE2800E707C6 /* User.swift in Sources */,
+				A302627C2915EEEE00E707C6 /* HomeViewModel.swift in Sources */,
 				A302621D2912BF1300E707C6 /* AuthRepository.swift in Sources */,
 				A30262062911E69A00E707C6 /* InputTextField.swift in Sources */,
 				A30262632913361400E707C6 /* PerfilTableViewCell.swift in Sources */,
