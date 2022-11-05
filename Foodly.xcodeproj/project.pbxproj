@@ -72,6 +72,9 @@
 		A302627C2915EEEE00E707C6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302627B2915EEEE00E707C6 /* HomeViewModel.swift */; };
 		A302627E2916B03600E707C6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302627D2916B03600E707C6 /* SearchView.swift */; };
 		A30262832916C2F000E707C6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262822916C2F000E707C6 /* SearchBar.swift */; };
+		A30262852916CA2400E707C6 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262842916CA2400E707C6 /* CategoryCollectionViewCell.swift */; };
+		A30262872916D0F100E707C6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262862916D0F100E707C6 /* SearchViewModel.swift */; };
+		A30262892916DC5900E707C6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262882916DC5900E707C6 /* Category.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +166,9 @@
 		A302627B2915EEEE00E707C6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A302627D2916B03600E707C6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A30262822916C2F000E707C6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A30262842916CA2400E707C6 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A30262862916D0F100E707C6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A30262882916DC5900E707C6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -542,6 +548,7 @@
 		A30262492912FDFE00E707C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A30262882916DC5900E707C6 /* Category.swift */,
 				A302624A2912FE2800E707C6 /* User.swift */,
 				A3026266291339FE00E707C6 /* PerfilTableViewCellModel.swift */,
 			);
@@ -564,6 +571,7 @@
 			children = (
 				A302625B2913101800E707C6 /* SearchViewController.swift */,
 				A302627D2916B03600E707C6 /* SearchView.swift */,
+				A30262862916D0F100E707C6 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -583,6 +591,7 @@
 			children = (
 				A30262622913361400E707C6 /* PerfilTableViewCell.swift */,
 				A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */,
+				A30262842916CA2400E707C6 /* CategoryCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -875,6 +884,7 @@
 				A30262312912E33400E707C6 /* SignUpStep1ViewController.swift in Sources */,
 				A302623D2912F85500E707C6 /* FirebaseError.swift in Sources */,
 				A302620D2911EF1200E707C6 /* AppContainer.swift in Sources */,
+				A30262892916DC5900E707C6 /* Category.swift in Sources */,
 				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
 				A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */,
 				A30262402912F9CF00E707C6 /* UserEntity.swift in Sources */,
@@ -898,6 +908,7 @@
 				A30262362912E6E200E707C6 /* UserPhoto.swift in Sources */,
 				A30262782915E2BB00E707C6 /* FiltersCollectionViewCell.swift in Sources */,
 				A30261FD2911A23F00E707C6 /* BeforeLoginCoordinator.swift in Sources */,
+				A30262852916CA2400E707C6 /* CategoryCollectionViewCell.swift in Sources */,
 				A30262142912B95400E707C6 /* SignUpStep3View.swift in Sources */,
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
 				A30262382912F77900E707C6 /* UserRepository.swift in Sources */,
@@ -921,6 +932,7 @@
 				A30262062911E69A00E707C6 /* InputTextField.swift in Sources */,
 				A30262632913361400E707C6 /* PerfilTableViewCell.swift in Sources */,
 				A30261E829118D7600E707C6 /* GetStartedViewController.swift in Sources */,
+				A30262872916D0F100E707C6 /* SearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

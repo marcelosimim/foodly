@@ -8,9 +8,15 @@
 import UIKit
 
 class SearchView: UIView {
-    lazy var searchBar: SearchBar = {
-        let searchBar = SearchBar()
-        return searchBar
+    private let topCategoriesLabel = UILabel()
+    let searchBar = SearchBar()
+    let categoryCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        collection.showsVerticalScrollIndicator = true
+        return collection
     }()
 
     override func layoutSubviews() {
@@ -20,7 +26,7 @@ class SearchView: UIView {
     }
 
     private func addViews() {
-        addSubviews([searchBar])
+        addSubviews([searchBar, topCategoriesLabel, categoryCollectionView])
         setupConstraints()
     }
 
@@ -29,6 +35,14 @@ class SearchView: UIView {
             searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             searchBar.centerXAnchor.constraint(equalTo: centerXAnchor),
+
+            topCategoriesLabel.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 26),
+            topCategoriesLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+
+            categoryCollectionView.topAnchor.constraint(equalTo: topCategoriesLabel.bottomAnchor, constant: 0),
+            categoryCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            categoryCollectionView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            categoryCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
@@ -36,5 +50,14 @@ class SearchView: UIView {
 extension SearchView: Stylable {
     func setupColors() {
         backgroundColor = .white
+        categoryCollectionView.backgroundColor = .white
+    }
+
+    func setupTexts() {
+        topCategoriesLabel.text = "Top Categories"
+    }
+
+    func setupFonts() {
+        topCategoriesLabel.font = .systemFont(ofSize: 16, weight: .semibold)
     }
 }
