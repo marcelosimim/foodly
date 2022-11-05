@@ -12,20 +12,20 @@ protocol SearchViewModel {
 }
 
 class DefaultSearchViewModel: SearchViewModel {
-    var categories = [ Category(name: "Pizza", image: .pizzaCategory),
-                       Category(name: "Hamburguer", image: .hamburguerCategory),
-                       Category(name: "Meat", image: .meatCategory),
-                       Category(name: "Hot dog", image: .hotdogCategory),
-                       Category(name: "Chicken", image: .chickenCategory),
-                       Category(name: "Fish", image: .fishCategory),
-                       Category(name: "Japanese", image: .japaneseCategory),
-                       Category(name: "Chinese", image: .chineseCategory),
-                       Category(name: "Mexican", image: .mexicanCategory),
-                       Category(name: "Italian", image: .italianCategory),
-                       Category(name: "Coffee", image: .coffeeCategory),
-                       Category(name: "Bakery", image: .bakeryCategory),
-                       Category(name: "Açai", image: .acaiCategory),
-                       Category(name: "Ice cream", image: .icecream),]
+    var categories = [  Category(image: .pizzaCategory, type: .pizza),
+                        Category(image: .hamburguerCategory, type: .hamburguer),
+                        Category(image: .meatCategory, type: .meat),
+                        Category(image: .hotdogCategory, type: .hotdog),
+                        Category(image: .chickenCategory, type: .chicken),
+                        Category(image: .fishCategory, type: .fish),
+                        Category(image: .japaneseCategory, type: .japanese),
+                        Category(image: .chineseCategory, type: .chinese),
+                        Category(image: .mexicanCategory, type: .mexican),
+                        Category(image: .italianCategory, type: .italian),
+                        Category(image: .coffeeCategory, type: .coffee),
+                        Category(image: .bakeryCategory, type: .bakery),
+                        Category(image: .acaiCategory, type: .acai),
+                        Category(image: .icecream, type: .icecream)]
 
 
 }

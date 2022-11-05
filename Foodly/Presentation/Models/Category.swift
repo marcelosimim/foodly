@@ -8,11 +8,11 @@
 import UIKit
 
 class Category {
-    let name: String
     let image: UIImage
+    let type: CategoryType
 
-    init(name: String, image: UIImage) {
-        self.name = name
+    init(image: UIImage, type: CategoryType) {
         self.image = image
+        self.type = type
     }
 }

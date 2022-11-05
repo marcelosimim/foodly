@@ -20,9 +20,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         dropShadow(color: .black, opacity: 0.05, offSet: .zero, radius: 16)
     }
 
-    func configure(_ image: UIImage, _ name: String) {
+    func configure(_ image: UIImage, _ type: CategoryType) {
         self.categoryImage.image = image
-        self.categoryName.text = name
+        self.categoryName.text = type.rawValue
     }
 
     private func addViews() {
