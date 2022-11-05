@@ -18,6 +18,7 @@ extension UIColor {
     static var cellDarkBlueBackground: UIColor { colorBuilder("cellDarkBlueBackground") }
     static var lightYellow: UIColor { colorBuilder("lightYellow") }
     static var lightRed: UIColor { colorBuilder("lightRed") }
+    static var whiteCultured: UIColor { colorBuilder("whiteCultured") }
 
     static func colorBuilder(_ name: String) -> UIColor {
         UIColor(named: name) ?? .clear
