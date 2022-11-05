@@ -6,6 +6,7 @@ target 'Foodly' do
   use_frameworks!
 
   # Pods for Foodly
+  pod 'Alamofire'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'Firebase/Storage'
