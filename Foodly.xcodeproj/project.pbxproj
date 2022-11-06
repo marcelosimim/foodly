@@ -76,6 +76,23 @@
 		A30262872916D0F100E707C6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262862916D0F100E707C6 /* SearchViewModel.swift */; };
 		A30262892916DC5900E707C6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262882916DC5900E707C6 /* Category.swift */; };
 		A302628B2916FB0D00E707C6 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302628A2916FB0D00E707C6 /* CategoryType.swift */; };
+		A302628D291709E300E707C6 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302628C291709E300E707C6 /* APIRouter.swift */; };
+		A302628F29170B3500E707C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302628E29170B3500E707C6 /* Constants.swift */; };
+		A3026291291712B500E707C6 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3026290291712B500E707C6 /* SearchRepository.swift */; };
+		A30262932917134400E707C6 /* DefaultSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262922917134400E707C6 /* DefaultSearchRepository.swift */; };
+		A302629529171D9900E707C6 /* RestaurantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302629429171D9900E707C6 /* RestaurantEntity.swift */; };
+		A302629729171E5300E707C6 /* AddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302629629171E5300E707C6 /* AddressEntity.swift */; };
+		A30262992917279400E707C6 /* PositionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262982917279400E707C6 /* PositionEntity.swift */; };
+		A302629B29172F3500E707C6 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302629A29172F3500E707C6 /* RestaurantModel.swift */; };
+		A302629D29172F5C00E707C6 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302629C29172F5C00E707C6 /* AddressModel.swift */; };
+		A302629F29172F7F00E707C6 /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302629E29172F7F00E707C6 /* PositionModel.swift */; };
+		A30262A12917302200E707C6 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262A02917302200E707C6 /* SearchUseCase.swift */; };
+		A30262A3291734F800E707C6 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262A2291734F800E707C6 /* RestaurantTableViewCell.swift */; };
+		A30262A52918577F00E707C6 /* RestaurantModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262A42918577F00E707C6 /* RestaurantModelBuilder.swift */; };
+		A30262A729185A2A00E707C6 /* PositionModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262A629185A2A00E707C6 /* PositionModelBuilder.swift */; };
+		A30262A929185AF800E707C6 /* AddressModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262A829185AF800E707C6 /* AddressModelBuilder.swift */; };
+		A30262AB29185CDB00E707C6 /* RestaurantPoiModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262AA29185CDB00E707C6 /* RestaurantPoiModelBuilder.swift */; };
+		A30262AD291864AD00E707C6 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262AC291864AD00E707C6 /* Restaurant.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +188,23 @@
 		A30262862916D0F100E707C6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A30262882916DC5900E707C6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A302628A2916FB0D00E707C6 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		A302628C291709E300E707C6 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		A302628E29170B3500E707C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3026290291712B500E707C6 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		A30262922917134400E707C6 /* DefaultSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSearchRepository.swift; sourceTree = "<group>"; };
+		A302629429171D9900E707C6 /* RestaurantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantEntity.swift; sourceTree = "<group>"; };
+		A302629629171E5300E707C6 /* AddressEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntity.swift; sourceTree = "<group>"; };
+		A30262982917279400E707C6 /* PositionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionEntity.swift; sourceTree = "<group>"; };
+		A302629A29172F3500E707C6 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		A302629C29172F5C00E707C6 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		A302629E29172F7F00E707C6 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
+		A30262A02917302200E707C6 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		A30262A2291734F800E707C6 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		A30262A42918577F00E707C6 /* RestaurantModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModelBuilder.swift; sourceTree = "<group>"; };
+		A30262A629185A2A00E707C6 /* PositionModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModelBuilder.swift; sourceTree = "<group>"; };
+		A30262A829185AF800E707C6 /* AddressModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModelBuilder.swift; sourceTree = "<group>"; };
+		A30262AA29185CDB00E707C6 /* RestaurantPoiModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPoiModelBuilder.swift; sourceTree = "<group>"; };
+		A30262AC291864AD00E707C6 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -444,6 +478,7 @@
 			children = (
 				A302621E2912BF5F00E707C6 /* DefaultAuthRepository.swift */,
 				A30262392912F7CC00E707C6 /* DefaultUserRepository.swift */,
+				A30262922917134400E707C6 /* DefaultSearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -453,6 +488,7 @@
 			children = (
 				A302621C2912BF1300E707C6 /* AuthRepository.swift */,
 				A30262372912F77900E707C6 /* UserRepository.swift */,
+				A3026290291712B500E707C6 /* SearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -462,6 +498,7 @@
 			children = (
 				A30262232912C11B00E707C6 /* AuthUseCase.swift */,
 				A30262472912FC8D00E707C6 /* UserUseCase.swift */,
+				A30262A02917302200E707C6 /* SearchUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -470,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				A30262292912DBEC00E707C6 /* Alert.swift */,
+				A302628E29170B3500E707C6 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -519,6 +557,7 @@
 				A302625029130BDF00E707C6 /* EventAfterLogin.swift */,
 				A302626A2913441300E707C6 /* PerfilTableViewCellType.swift */,
 				A302628A2916FB0D00E707C6 /* CategoryType.swift */,
+				A302628C291709E300E707C6 /* APIRouter.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -527,6 +566,9 @@
 			isa = PBXGroup;
 			children = (
 				A302623F2912F9CF00E707C6 /* UserEntity.swift */,
+				A302629429171D9900E707C6 /* RestaurantEntity.swift */,
+				A302629629171E5300E707C6 /* AddressEntity.swift */,
+				A30262982917279400E707C6 /* PositionEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -536,6 +578,9 @@
 			children = (
 				A30262442912FA5600E707C6 /* ModelBuilders */,
 				A30262422912FA1500E707C6 /* UserModel.swift */,
+				A302629A29172F3500E707C6 /* RestaurantModel.swift */,
+				A302629C29172F5C00E707C6 /* AddressModel.swift */,
+				A302629E29172F7F00E707C6 /* PositionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,6 +589,10 @@
 			isa = PBXGroup;
 			children = (
 				A30262452912FA6200E707C6 /* UserModelBuilder.swift */,
+				A30262A42918577F00E707C6 /* RestaurantModelBuilder.swift */,
+				A30262A629185A2A00E707C6 /* PositionModelBuilder.swift */,
+				A30262A829185AF800E707C6 /* AddressModelBuilder.swift */,
+				A30262AA29185CDB00E707C6 /* RestaurantPoiModelBuilder.swift */,
 			);
 			path = ModelBuilders;
 			sourceTree = "<group>";
@@ -554,6 +603,7 @@
 				A30262882916DC5900E707C6 /* Category.swift */,
 				A302624A2912FE2800E707C6 /* User.swift */,
 				A3026266291339FE00E707C6 /* PerfilTableViewCellModel.swift */,
+				A30262AC291864AD00E707C6 /* Restaurant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -595,6 +645,7 @@
 				A30262622913361400E707C6 /* PerfilTableViewCell.swift */,
 				A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */,
 				A30262842916CA2400E707C6 /* CategoryCollectionViewCell.swift */,
+				A30262A2291734F800E707C6 /* RestaurantTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -883,23 +934,31 @@
 				A302626D2914492600E707C6 /* HomeView.swift in Sources */,
 				A302624D29130B4900E707C6 /* AfterLoginCoordinator.swift in Sources */,
 				A302624F29130BB500E707C6 /* EventBeforeLogin.swift in Sources */,
+				A3026291291712B500E707C6 /* SearchRepository.swift in Sources */,
 				A30262122912B86B00E707C6 /* SignUpStep3ViewController.swift in Sources */,
 				A30262312912E33400E707C6 /* SignUpStep1ViewController.swift in Sources */,
+				A30262A929185AF800E707C6 /* AddressModelBuilder.swift in Sources */,
 				A302623D2912F85500E707C6 /* FirebaseError.swift in Sources */,
 				A302620D2911EF1200E707C6 /* AppContainer.swift in Sources */,
 				A302628B2916FB0D00E707C6 /* CategoryType.swift in Sources */,
 				A30262892916DC5900E707C6 /* Category.swift in Sources */,
+				A30262A52918577F00E707C6 /* RestaurantModelBuilder.swift in Sources */,
+				A30262A3291734F800E707C6 /* RestaurantTableViewCell.swift in Sources */,
 				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
 				A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */,
 				A30262402912F9CF00E707C6 /* UserEntity.swift in Sources */,
 				A30262162912BAEB00E707C6 /* SignUpStep3ViewModel.swift in Sources */,
 				A30262332912E4C400E707C6 /* SignUpStep1ViewModel.swift in Sources */,
+				A302629529171D9900E707C6 /* RestaurantEntity.swift in Sources */,
 				A30262432912FA1500E707C6 /* UserModel.swift in Sources */,
 				A302622A2912DBEC00E707C6 /* Alert.swift in Sources */,
 				A302627229147C8000E707C6 /* EnjoyCardDetails.swift in Sources */,
+				A30262AD291864AD00E707C6 /* Restaurant.swift in Sources */,
 				A30262242912C11B00E707C6 /* AuthUseCase.swift in Sources */,
 				A30261ED29118E3E00E707C6 /* UIImage.swift in Sources */,
 				A30262462912FA6200E707C6 /* UserModelBuilder.swift in Sources */,
+				A30262A729185A2A00E707C6 /* PositionModelBuilder.swift in Sources */,
+				A302629F29172F7F00E707C6 /* PositionModel.swift in Sources */,
 				A30262652913398F00E707C6 /* PerfilViewModel.swift in Sources */,
 				A302620A2911ED0200E707C6 /* SignUpStep2ViewModel.swift in Sources */,
 				A302626929133D2800E707C6 /* BlackButton.swift in Sources */,
@@ -915,19 +974,27 @@
 				A30262852916CA2400E707C6 /* CategoryCollectionViewCell.swift in Sources */,
 				A30262142912B95400E707C6 /* SignUpStep3View.swift in Sources */,
 				A30261F32911903300E707C6 /* UIView.swift in Sources */,
+				A302628D291709E300E707C6 /* APIRouter.swift in Sources */,
+				A302629729171E5300E707C6 /* AddressEntity.swift in Sources */,
+				A302629B29172F3500E707C6 /* RestaurantModel.swift in Sources */,
+				A30262AB29185CDB00E707C6 /* RestaurantPoiModelBuilder.swift in Sources */,
 				A30262382912F77900E707C6 /* UserRepository.swift in Sources */,
 				A30262032911E32500E707C6 /* SignUpStep2View.swift in Sources */,
 				A302625E2913102E00E707C6 /* PerfilViewController.swift in Sources */,
 				A302622F2912E32A00E707C6 /* SignUpStep1View.swift in Sources */,
 				A30261F129118F6700E707C6 /* Stylable.swift in Sources */,
+				A30262932917134400E707C6 /* DefaultSearchRepository.swift in Sources */,
 				A30261B52911876700E707C6 /* SceneDelegate.swift in Sources */,
 				A302625129130BDF00E707C6 /* EventAfterLogin.swift in Sources */,
+				A30262A12917302200E707C6 /* SearchUseCase.swift in Sources */,
 				A30261F8291192FC00E707C6 /* UIColor.swift in Sources */,
 				A302620F2911F26F00E707C6 /* String.swift in Sources */,
+				A302629D29172F5C00E707C6 /* AddressModel.swift in Sources */,
 				A302625329130C9C00E707C6 /* AfterLoginViewController.swift in Sources */,
 				A302626029132EC700E707C6 /* PerfilView.swift in Sources */,
 				A302625C2913101800E707C6 /* SearchViewController.swift in Sources */,
 				A302625A29130FF900E707C6 /* HomeViewController.swift in Sources */,
+				A302628F29170B3500E707C6 /* Constants.swift in Sources */,
 				A302624B2912FE2800E707C6 /* User.swift in Sources */,
 				A302627C2915EEEE00E707C6 /* HomeViewModel.swift in Sources */,
 				A302621D2912BF1300E707C6 /* AuthRepository.swift in Sources */,
@@ -935,6 +1002,7 @@
 				A30262832916C2F000E707C6 /* SearchBar.swift in Sources */,
 				A30262062911E69A00E707C6 /* InputTextField.swift in Sources */,
 				A30262632913361400E707C6 /* PerfilTableViewCell.swift in Sources */,
+				A30262992917279400E707C6 /* PositionEntity.swift in Sources */,
 				A30261E829118D7600E707C6 /* GetStartedViewController.swift in Sources */,
 				A30262872916D0F100E707C6 /* SearchViewModel.swift in Sources */,
 			);
