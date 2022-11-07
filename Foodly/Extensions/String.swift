@@ -17,4 +17,10 @@ extension String {
     func isValidPassword() -> Bool {
         self.count >= 8
     }
+
+    func adjustURL() -> String {
+        return self.replacingOccurrences(of: " ", with: "%20")
+            .replacingOccurrences(of: "é", with: "%C3%A9")
+            .replacingOccurrences(of: "ç", with: "%C3%A7")
+    }
 }

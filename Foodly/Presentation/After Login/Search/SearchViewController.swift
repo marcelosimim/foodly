@@ -5,11 +5,14 @@
 //  Created by Marcelo Simim Santos on 11/2/22.
 //
 
+import RxCocoa
+import RxSwift
 import UIKit
 
 class SearchViewController: UIViewController, Coordinating {
     private let customView = SearchView()
-    private let viewModel = AppContainer.shared.resolve(SearchViewModel.self)!
+    private var viewModel = AppContainer.shared.resolve(SearchViewModel.self)!
+    private let disposeBag = DisposeBag()
     var coodinator: Coordinator?
 
     override func viewDidLoad() {
@@ -17,13 +20,38 @@ class SearchViewController: UIViewController, Coordinating {
         view = customView
         customView.categoryCollectionView.delegate = self
         customView.categoryCollectionView.dataSource = self
+        customView.searchResultsTableView.delegate = self
+        customView.searchResultsTableView.dataSource = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customView.topCategoriesMode()
+        viewModelBinds()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.clearSearch()
+    }
+
+    private func viewModelBinds() {
+        viewModel.searchFinished.bind { [weak self] count in
+            self?.customView.setupResultsLabel(numberOfResults: count)
+            self?.customView.searchResultsTableView.reloadData()
+        }.disposed(by: disposeBag)
     }
 }
+
+// MARK: - CollectionView methods
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(viewModel.categories[indexPath.row].type.rawValue)
+        let category = viewModel.categories[indexPath.row].type
+        viewModel.typeSearched = category
+        viewModel.search(category.rawValue)
+        customView.searchResultMode()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,5 +76,30 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
+    }
+}
+
+// MARK: - TableView methods
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.restaurants.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as? RestaurantTableViewCell, let searched = viewModel.typeSearched else {
+            fatalError()
+        }
+        let resturant = viewModel.restaurants[indexPath.row]
+        cell.configure(type: searched, restaurant: resturant)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        230
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

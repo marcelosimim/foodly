@@ -42,6 +42,7 @@ extension UIImage {
     static var signup2: UIImage { imageBuilder("signup2") }
     static var signup3: UIImage { imageBuilder("signup3") }
     static var sortAndFilter: UIImage { imageBuilder("sortAndFilter") }
+    static var star: UIImage { UIImage(systemName: "star.fill")! }
     static var xmarkCircle: UIImage { UIImage(systemName: "xmark.circle.fill")! }
     
     static func imageBuilder(_ name: String) -> UIImage {

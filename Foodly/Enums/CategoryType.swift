@@ -8,18 +8,14 @@
 import Foundation
 
 enum CategoryType: String {
-    case acai = "Açai"
-    case bakery = "Bakery"
-    case chicken = "Chicken"
-    case chinese = "Chinese"
-    case coffee = "Coffee"
-    case fish = "Fish"
+    case chicken = "Frango"
+    case chinese = "Chinesa"
+    case fish = "Peixe"
     case hamburguer = "Hamburguer"
-    case hotdog = "Hot dog"
-    case icecream = "Ice cream"
-    case italian = "Italian"
-    case japanese = "Japanese"
-    case meat = "Meat"
-    case mexican = "Mexican"
+    case hotdog = "Cachorro quente"
+    case italian = "Italiana"
+    case japanese = "Japones"
+    case meat = "Carne"
+    case mexican = "Mexicana"
     case pizza = "Pizza"
 }
