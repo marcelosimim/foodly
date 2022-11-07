@@ -9,9 +9,8 @@ import Foundation
 import RxSwift
 
 protocol HomeViewModel {
-    var filterCells: [String] { get }
-    var fetchRestaurantsFinished: PublishSubject<Int> { get }
-    var restaurants: [Restaurant] { get }
+    var filterCells: BehaviorSubject<[String]> { get }
+    var restaurants: PublishSubject<[Restaurant]> { get }
 
     func saveCurrentLocation(lat: Double, lon: Double)
 }
@@ -20,9 +19,8 @@ class DefaultHomeViewModel: HomeViewModel {
     private let searchUseCase: SearchUseCase
     private var latitude: Double?
     private var longitude: Double?
-    var filterCells = ["Pickup", "Sort", "Top Eats", "Price range", "Dietary"]
-    var fetchRestaurantsFinished = PublishSubject<Int>()
-    var restaurants: [Restaurant] = []
+    var filterCells = BehaviorSubject(value: ["Pickup", "Sort", "Top Eats", "Price range", "Dietary"])
+    var restaurants = PublishSubject<[Restaurant]>()
 
     init(searchUseCase: SearchUseCase) {
         self.searchUseCase = searchUseCase
@@ -38,21 +36,21 @@ class DefaultHomeViewModel: HomeViewModel {
 
     private func showRestaurants() {
         guard let latitude = latitude, let longitude = longitude else { return }
-        searchUseCase.categorySearch(query: "restaurante", lat: "\(latitude)", lon: "\(longitude)") { [weak self] result in
+        searchUseCase.nearbySearch(query: "restaurante", lat: "\(latitude)", lon: "\(longitude)") { [weak self] result in
             switch result {
             case .success(let restaurants):
                 self?.convertFromModelArray(restaurants)
-                self?.fetchRestaurantsFinished.onNext(restaurants.count)
             case .failure(_):
-                self?.fetchRestaurantsFinished.onNext(0)
+                break
             }
         }
     }
 
     private func convertFromModelArray(_ models: [RestaurantModel]) {
-        restaurants = []
+        var array: [Restaurant] = []
         for model in models {
-            restaurants.append(Restaurant.fromModel(model))
+            array.append(Restaurant.fromModel(model))
         }
+        restaurants.onNext(array)
     }
 }

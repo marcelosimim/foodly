@@ -10,7 +10,7 @@ import Foundation
 
 protocol SearchUseCase {
     func categorySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void)
-    func nearbySearch(query: String, lat: String, lon: String)
+    func nearbySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void)
 }
 
 class DefaultSearchUseCase: SearchUseCase {
@@ -24,7 +24,7 @@ class DefaultSearchUseCase: SearchUseCase {
         searchRepository.categorySearch(query: query, lat: lat, lon: lon, completion: completion)
     }
 
-    func nearbySearch(query: String, lat: String, lon: String) {
-
+    func nearbySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void) {
+        searchRepository.nearbySearch(query: query, lat: lat, lon: lon, completion: completion)
     }
 }

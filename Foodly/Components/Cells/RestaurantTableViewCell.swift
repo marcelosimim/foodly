@@ -54,6 +54,7 @@ class RestaurantTableViewCell: UITableViewCell {
             scoreView.topAnchor.constraint(equalTo: distanceView.topAnchor),
             scoreView.leadingAnchor.constraint(equalTo: distanceView.trailingAnchor, constant: 12),
             scoreView.heightAnchor.constraint(equalToConstant: 40),
+            scoreView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
 
             scoreLabel.leadingAnchor.constraint(equalTo: scoreView.leadingAnchor, constant: 16),
             scoreLabel.centerYAnchor.constraint(equalTo: scoreView.centerYAnchor),

@@ -17,6 +17,8 @@ class HomeView: UIView {
     let filtersCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 15
+        layout.estimatedItemSize = CGSize(width: 76, height: 34)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(FiltersCollectionViewCell.self, forCellWithReuseIdentifier: FiltersCollectionViewCell.identifier)
         collection.showsHorizontalScrollIndicator = false
@@ -83,15 +85,11 @@ class HomeView: UIView {
             restaurantsTableView.leadingAnchor.constraint(equalTo: enjoyCard1.leadingAnchor),
             restaurantsTableView.trailingAnchor.constraint(equalTo: enjoyCard2.trailingAnchor),
             restaurantsTableView.bottomAnchor.constraint(equalTo: scrollViewContent.bottomAnchor),
-            restaurantsTableView.heightAnchor.constraint(equalToConstant: 230*10),
+            restaurantsTableView.heightAnchor.constraint(equalToConstant: 236*10),
 
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicator.topAnchor.constraint(equalTo: enjoyCard1.bottomAnchor, constant: 230),
         ])
-    }
-
-    func setTableViewTitle(_ title: String) {
-        tableViewTitle.text = title
     }
 }
 
@@ -111,6 +109,7 @@ extension HomeView: Stylable {
     func setupTexts() {
         enjoyCard1.setupLabels(main: "Enjoy 25% Off\n(upto US $7)", second: "Your frist two orders")
         enjoyCard2.setupLabels(main: "Enjoy 35% Off\n(upto US $12)", second: "Your frist two orders")
+        tableViewTitle.text = "Special Offers"
     }
 
     func setupFonts() {

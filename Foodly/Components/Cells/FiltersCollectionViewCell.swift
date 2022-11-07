@@ -30,7 +30,8 @@ class FiltersCollectionViewCell: UICollectionViewCell {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             filterName.centerXAnchor.constraint(equalTo: centerXAnchor),
-            filterName.centerYAnchor.constraint(equalTo: centerYAnchor)
+            filterName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            filterName.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
 

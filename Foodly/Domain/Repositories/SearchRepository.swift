@@ -10,5 +10,5 @@ import Foundation
 
 protocol SearchRepository {
     func categorySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void)
-    func nearbySearch(query: String, lat: String, lon: String)
+    func nearbySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void)
 }

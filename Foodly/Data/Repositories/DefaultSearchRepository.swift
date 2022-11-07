@@ -21,7 +21,16 @@ class DefaultSearchRepository: SearchRepository {
         }
     }
 
-    func nearbySearch(query: String, lat: String, lon: String) {
-
+    func nearbySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void) {
+        let url = "\(K.TomtomAPI.baseURL)/search/2/categorySearch/\(query.adjustURL()).json?&lat=\(lat)&lon=\(lon)&view=Unified&relatedPois=all&key=\(K.TomtomAPI.apiKey)"
+        let request = AF.request(url)
+        request.responseDecodable(of: RestaurantsEntity.self) { response in
+            guard let value = response.value else {
+                print(response.error)
+                completion(.failure(response.error!))
+                return
+            }
+            completion(.success(value.toModel()))
+        }
     }
 }
