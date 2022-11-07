@@ -5,6 +5,7 @@
 //  Created by Marcelo Simim Santos on 11/2/22.
 //
 
+import CoreLocation
 import RxCocoa
 import RxSwift
 import UIKit
@@ -13,18 +14,29 @@ class HomeViewController: UIViewController, Coordinating {
     private let customView = HomeView()
     private let disposeBag = DisposeBag()
     private let viewModel = AppContainer.shared.resolve(HomeViewModel.self)!
+    private let locationManager = CLLocationManager()
     var coodinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
-        customView.filtersCollectionView.delegate = self
-        customView.filtersCollectionView.dataSource = self
+        setupLocation()
+        setupCollectionView()
+        setupTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModelBinds()
         bindActions()
+    }
+
+    private func viewModelBinds() {
+        viewModel.fetchRestaurantsFinished.bind { [weak self] count in
+            count == 0 ? self?.customView.setTableViewTitle("No results") : self?.customView.setTableViewTitle("Special Offers")
+            self?.customView.activityIndicator.stopAnimating()
+            self?.customView.restaurantsTableView.reloadData()
+        }.disposed(by: disposeBag)
     }
 
     private func bindActions() {
@@ -41,6 +53,21 @@ class HomeViewController: UIViewController, Coordinating {
             self?.modalPresentationStyle = .currentContext
             self?.present(vc, animated: true)
         }.disposed(by: disposeBag)
+    }
+
+    private func setupLocation() {
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+    }
+
+    private func setupCollectionView() {
+        customView.filtersCollectionView.delegate = self
+        customView.filtersCollectionView.dataSource = self
+    }
+
+    private func setupTableView() {
+        customView.restaurantsTableView.delegate = self
+        customView.restaurantsTableView.dataSource = self
     }
 }
 
@@ -65,5 +92,40 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         15
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.restaurants.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as? RestaurantTableViewCell else { fatalError() }
+        let restaurant = viewModel.restaurants[indexPath.row]
+
+        cell.configure(type: .restaurant, restaurant: restaurant)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        230
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension HomeViewController: CLLocationManagerDelegate {
+
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        viewModel.saveCurrentLocation(lat: locValue.latitude, lon: locValue.longitude)
     }
 }

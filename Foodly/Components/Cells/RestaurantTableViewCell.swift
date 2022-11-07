@@ -98,17 +98,20 @@ class RestaurantTableViewCell: UITableViewCell {
             photo.image = UIImage(named: "mexican\(Int.random(in: 0...4))")
         case .pizza:
             photo.image = UIImage(named: "pizza\(Int.random(in: 0...4))")
+        case .restaurant:
+            photo.image = UIImage(named: "restaurant\(Int.random(in: 0...4))")
         }
     }
 
     private func calculateDistance(lat: Float, lon: Float) {
-        let latitude = CLLocationDegrees(floatLiteral: Double(lat))
-        let longitude = CLLocationDegrees(floatLiteral: Double(lon))
-        let restaurantCoordinates = CLLocation(latitude: latitude, longitude: longitude)
-        let userLocation = CLLocation(latitude: CLLocationDegrees(floatLiteral: -19.887244514643392), longitude: CLLocationDegrees(floatLiteral: -43.90674434039457))
-        let distance = restaurantCoordinates.distance(from: userLocation)/1000
+        let userLat = UserDefaults.standard.float(forKey: "userLatitude")
+        let userLon = UserDefaults.standard.float(forKey: "userLongitude")
+        let userCoordinates = CLLocation.newLocation(lat: Double(userLat), lon: Double(userLon))
 
-        distanceLabel.text = String(format: "%.3f km", distance)
+        let restaurantCoordinates = CLLocation.newLocation(lat: Double(lat), lon: Double(lon))
+
+        let distance = restaurantCoordinates.distance(from: userCoordinates)
+        distanceLabel.text = distance <= 1000 ? String(format: "%.0f m", distance) : String(format: "%.3f km", distance/1000)
     }
 
     func configure(type: CategoryType, restaurant: Restaurant) {
@@ -116,6 +119,10 @@ class RestaurantTableViewCell: UITableViewCell {
         scoreLabel.text = String(format: "%.2f", restaurant.score ?? 0)
         chooseImage(type)
         calculateDistance(lat: restaurant.position?.lat ?? 0, lon: restaurant.position?.lon ?? 0)
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        contentView.backgroundColor = .white
     }
 }
 

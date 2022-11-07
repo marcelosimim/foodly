@@ -19,7 +19,7 @@ class AfterLoginViewController: UITabBarController, Coordinating {
         navigationItem.hidesBackButton = true
         setScreens()
         setupColors()
-        selectedIndex = 1
+        selectedIndex = 0
     }
 
     private func setScreens() {

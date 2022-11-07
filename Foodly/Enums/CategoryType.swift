@@ -18,4 +18,5 @@ enum CategoryType: String {
     case meat = "Carne"
     case mexican = "Mexicana"
     case pizza = "Pizza"
+    case restaurant = "Restaurante"
 }

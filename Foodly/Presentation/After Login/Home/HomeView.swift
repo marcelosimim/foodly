@@ -10,6 +10,7 @@ import UIKit
 class HomeView: UIView {
     private let scrollView = UIScrollView()
     private let scrollViewContent = UIView()
+    private let tableViewTitle = UILabel()
     let sortAndFilterButton = UIButton()
     let enjoyCard1 = EnjoyCard()
     let enjoyCard2 = EnjoyCard()
@@ -21,6 +22,18 @@ class HomeView: UIView {
         collection.showsHorizontalScrollIndicator = false
         return collection
     }()
+    let restaurantsTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(RestaurantTableViewCell.self, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
+        tableView.isScrollEnabled = false
+        return tableView
+    }()
+    let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        return activityIndicator
+    }()
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -31,7 +44,7 @@ class HomeView: UIView {
     private func addViews() {
         addSubviews([scrollView])
         scrollView.addSubviews([scrollViewContent])
-        scrollViewContent.addSubviews([sortAndFilterButton, filtersCollectionView , enjoyCard1, enjoyCard2])
+        scrollViewContent.addSubviews([sortAndFilterButton, filtersCollectionView , enjoyCard1, enjoyCard2, tableViewTitle, restaurantsTableView, activityIndicator])
         setupConstraints()
     }
 
@@ -63,10 +76,22 @@ class HomeView: UIView {
             enjoyCard2.trailingAnchor.constraint(equalTo: scrollViewContent.trailingAnchor, constant: -16),
             enjoyCard2.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width-32-24)/2),
 
+            tableViewTitle.topAnchor.constraint(equalTo: enjoyCard2.bottomAnchor, constant: 18),
+            tableViewTitle.leadingAnchor.constraint(equalTo: sortAndFilterButton.leadingAnchor),
 
+            restaurantsTableView.topAnchor.constraint(equalTo: tableViewTitle.bottomAnchor, constant: 16),
+            restaurantsTableView.leadingAnchor.constraint(equalTo: enjoyCard1.leadingAnchor),
+            restaurantsTableView.trailingAnchor.constraint(equalTo: enjoyCard2.trailingAnchor),
+            restaurantsTableView.bottomAnchor.constraint(equalTo: scrollViewContent.bottomAnchor),
+            restaurantsTableView.heightAnchor.constraint(equalToConstant: 230*10),
 
-            enjoyCard2.bottomAnchor.constraint(equalTo: scrollViewContent.bottomAnchor)
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.topAnchor.constraint(equalTo: enjoyCard1.bottomAnchor, constant: 230),
         ])
+    }
+
+    func setTableViewTitle(_ title: String) {
+        tableViewTitle.text = title
     }
 }
 
@@ -86,5 +111,9 @@ extension HomeView: Stylable {
     func setupTexts() {
         enjoyCard1.setupLabels(main: "Enjoy 25% Off\n(upto US $7)", second: "Your frist two orders")
         enjoyCard2.setupLabels(main: "Enjoy 35% Off\n(upto US $12)", second: "Your frist two orders")
+    }
+
+    func setupFonts() {
+        tableViewTitle.font = .systemFont(ofSize: 24, weight: .semibold)
     }
 }

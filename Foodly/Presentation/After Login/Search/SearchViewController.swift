@@ -90,8 +90,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as? RestaurantTableViewCell, let searched = viewModel.typeSearched else {
             fatalError()
         }
-        let resturant = viewModel.restaurants[indexPath.row]
-        cell.configure(type: searched, restaurant: resturant)
+        let restaurant = viewModel.restaurants[indexPath.row]
+        cell.configure(type: searched, restaurant: restaurant)
         return cell
     }
 

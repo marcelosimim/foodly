@@ -9,7 +9,7 @@ import Alamofire
 
 class DefaultSearchRepository: SearchRepository {
     func categorySearch(query: String, lat: String, lon: String, completion: @escaping(Result<Array<RestaurantModel>, AFError>) -> Void) {
-        let url = "\(K.TomtomAPI.baseURL)/search/2/categorySearch/\(query.adjustURL()).json?lat=\(lat)&lon=\(lon)&view=Unified&relatedPois=all&key=\(K.TomtomAPI.apiKey)"
+        let url = "\(K.TomtomAPI.baseURL)/search/2/categorySearch/\(query.adjustURL()).json?limit=\(Int.random(in: 20...50))&lat=\(lat)&lon=\(lon)&view=Unified&relatedPois=all&key=\(K.TomtomAPI.apiKey)"
         let request = AF.request(url)
         request.responseDecodable(of: RestaurantsEntity.self) { response in
             guard let value = response.value else {
