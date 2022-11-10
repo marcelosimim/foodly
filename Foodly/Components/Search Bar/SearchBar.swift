@@ -9,7 +9,7 @@ import UIKit
 
 class SearchBar: UIView {
     private let searchIcon = UIImageView()
-    private let clearButton = UIButton()
+    let clearButton = UIButton()
     let textField = UITextField()
 
     override func layoutSubviews() {

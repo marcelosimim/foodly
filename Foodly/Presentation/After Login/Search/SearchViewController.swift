@@ -18,10 +18,6 @@ class SearchViewController: UIViewController, Coordinating {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
-        customView.categoryCollectionView.delegate = self
-        customView.categoryCollectionView.dataSource = self
-        customView.searchResultsTableView.delegate = self
-        customView.searchResultsTableView.dataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,70 +32,38 @@ class SearchViewController: UIViewController, Coordinating {
     }
 
     private func viewModelBinds() {
-        viewModel.searchFinished.bind { [weak self] count in
-            self?.customView.setupResultsLabel(numberOfResults: count)
-            self?.customView.searchResultsTableView.reloadData()
+        viewModel.restaurants.bind(to: customView.searchResultsTableView.rx.items(cellIdentifier: RestaurantTableViewCell.identifier, cellType: RestaurantTableViewCell.self)) { (_, restaurant, cell) in
+            cell.configure(type: .restaurant, restaurant: restaurant)
+        }.disposed(by: disposeBag)
+
+        viewModel.categories.bind(to: customView.categoryCollectionView.rx.items(cellIdentifier: CategoryCollectionViewCell.identifier, cellType: CategoryCollectionViewCell.self)) { (_, category, cell) in
+            cell.configure(category.image, category.type)
+        }.disposed(by: disposeBag)
+
+        customView.categoryCollectionView.rx.itemSelected.bind { [weak self] indexPath in
+            do {
+                guard let self = self else { return }
+                let category = try self.viewModel.categories.value()[indexPath.row].type
+                self.viewModel.typeSearched = category
+                self.viewModel.search(category.rawValue)
+                self.customView.searchResultMode()
+            } catch { }
+        }.disposed(by: disposeBag)
+
+        customView.searchBar.textField.rx.controlEvent(.editingDidEndOnExit).bind { [weak self] in
+            guard let textField = self?.customView.searchBar.textField, let text = textField.text else { return }
+            if text != "" {
+                self?.viewModel.search(text)
+                self?.customView.searchResultMode()
+            }
+            textField.resignFirstResponder()
+        }.disposed(by: disposeBag)
+
+        customView.searchBar.clearButton.rx.controlEvent(.touchUpInside).bind { [weak self] in
+            self?.customView.searchBar.textField.text = ""
+            self?.customView.topCategoriesMode()
         }.disposed(by: disposeBag)
     }
 }
 
-// MARK: - CollectionView methods
 
-extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let category = viewModel.categories[indexPath.row].type
-        viewModel.typeSearched = category
-        viewModel.search(category.rawValue)
-        customView.searchResultMode()
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.categories.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let category = viewModel.categories[indexPath.row]
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else { fatalError() }
-
-        cell.configure(category.image, category.type)
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.bounds.width/2.15, height: 176)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        20
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
-    }
-}
-
-// MARK: - TableView methods
-
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.restaurants.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as? RestaurantTableViewCell, let searched = viewModel.typeSearched else {
-            fatalError()
-        }
-        let restaurant = viewModel.restaurants[indexPath.row]
-        cell.configure(type: searched, restaurant: restaurant)
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        230
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}

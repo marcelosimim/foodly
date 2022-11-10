@@ -12,10 +12,13 @@ class SearchView: UIView {
     let searchBar = SearchBar()
     let categoryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width/2.5, height: 176)
+        layout.minimumLineSpacing = 20
         layout.scrollDirection = .vertical
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
-        collection.showsVerticalScrollIndicator = true
+        collection.showsVerticalScrollIndicator = false
         return collection
     }()
     let searchResultsLabel = UILabel()
@@ -23,6 +26,7 @@ class SearchView: UIView {
         let tableView = UITableView()
         tableView.register(RestaurantTableViewCell.self, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
         tableView.showsVerticalScrollIndicator = false
+        tableView.rowHeight = 230
         return tableView
     }()
 
