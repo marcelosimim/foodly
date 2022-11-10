@@ -20,6 +20,8 @@ protocol SearchViewModel {
 
 class DefaultSearchViewModel: SearchViewModel {
     private let searchUseCase: SearchUseCase
+    private var latitude: Float?
+    private var longitude: Float?
     var categories = BehaviorSubject(value: [ Category(image: .pizzaCategory, type: .pizza),
             Category(image: .hamburguerCategory, type: .hamburguer), Category(image: .meatCategory, type: .meat),
             Category(image: .hotdogCategory, type: .hotdog), Category(image: .chickenCategory, type: .chicken),
@@ -31,10 +33,12 @@ class DefaultSearchViewModel: SearchViewModel {
     
     init(searchUseCase: SearchUseCase) {
         self.searchUseCase = searchUseCase
+        getUserLocation()
     }
 
     func search(_ query: String) {
-        searchUseCase.categorySearch(query: query, lat: "-19.887244514643392", lon: "-43.90674434039457") { [weak self] response in
+        guard let latitude = latitude, let longitude = longitude else { return }
+        searchUseCase.categorySearch(query: query, lat: "\(latitude)", lon: "\(longitude)") { [weak self] response in
             switch response {
             case .success(let restaurants):
                 self?.convertFromModelArray(restaurants)
@@ -46,6 +50,11 @@ class DefaultSearchViewModel: SearchViewModel {
 
     func clearSearch() {
         restaurants.onNext([])
+    }
+
+    private func getUserLocation() {
+        latitude = UserDefaults.standard.float(forKey: "userLatitude")
+        longitude = UserDefaults.standard.float(forKey: "userLongitude")
     }
 
     private func convertFromModelArray(_ models: [RestaurantModel]) {
