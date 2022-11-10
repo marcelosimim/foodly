@@ -41,13 +41,19 @@ class InputTextField: UIView {
     private func setupAsEmail() {
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
-        textField.placeholder = "youremail@address.com"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "youremail@address.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
     }
 
     private func setupAsPassword() {
         textField.keyboardType = .default
         textField.isSecureTextEntry = true
-        textField.placeholder = "Minimum 8 characters"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Minimum 8 characters",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
+        )
     }
 
     private func setupAsName() {
@@ -88,9 +94,10 @@ class InputTextField: UIView {
 extension InputTextField: Stylable {
     func setupColors() {
         layer.borderColor = UIColor.textFieldBorder.cgColor
-        clearButton.tintColor = .lightGray.withAlphaComponent(0.2)
+        clearButton.tintColor = .lightGray.withAlphaComponent(0.5)
         arrowButton.backgroundColor = .red
         arrowButton.imageView?.tintColor = .white
+        textField.textColor = .black
     }
 
 

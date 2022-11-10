@@ -48,11 +48,8 @@ class SignUpStep1ViewController: UIViewController, Coordinating {
     }
 
     private func viewModelBinds() {
-        let arrowButton = customView.inputTextField.arrowButton
-
-        viewmodel.isNameValid.bind { isValid in
-            arrowButton.isEnabled = isValid
-        }.disposed(by: disposeBag)
+        viewmodel.isNameValid.bind(to: customView.inputTextField.arrowButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 }
 

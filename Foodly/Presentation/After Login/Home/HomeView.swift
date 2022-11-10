@@ -27,6 +27,7 @@ class HomeView: UIView {
     let restaurantsTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(RestaurantTableViewCell.self, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
+        tableView.rowHeight = 230
         tableView.isScrollEnabled = false
         return tableView
     }()

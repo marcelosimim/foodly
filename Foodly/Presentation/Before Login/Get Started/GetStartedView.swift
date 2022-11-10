@@ -44,6 +44,7 @@ class GetStartedView: UIView {
 extension GetStartedView: Stylable {
     func setupColors() {
         backgroundColor = .white
+        mainLabel.textColor = .black
     }
 
     func setupImages() {

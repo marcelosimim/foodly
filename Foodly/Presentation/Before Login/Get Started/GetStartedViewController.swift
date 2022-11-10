@@ -5,6 +5,7 @@
 //  Created by Marcelo Simim Santos on 11/1/22.
 //
 
+import RxCocoa
 import UIKit
 
 class GetStartedViewController: UIViewController, Coordinating {

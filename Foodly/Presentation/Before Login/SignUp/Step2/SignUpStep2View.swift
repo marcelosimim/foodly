@@ -43,6 +43,7 @@ class SignUpStep2View: UIView {
 extension SignUpStep2View: Stylable {
     func setupColors() {
         backgroundColor = .white
+        emailLabel.textColor = .black
     }
 
     func setupImages() {

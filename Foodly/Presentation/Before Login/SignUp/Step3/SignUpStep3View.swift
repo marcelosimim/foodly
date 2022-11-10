@@ -43,6 +43,7 @@ class SignUpStep3View: UIView {
 extension SignUpStep3View: Stylable {
     func setupColors() {
         backgroundColor = .white
+        passwordLabel.textColor = .black
     }
 
     func setupImages() {

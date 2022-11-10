@@ -25,7 +25,10 @@ class BeforeLoginCoordinator: Coordinator {
             vc.coodinator = self
             navigationController?.pushViewController(vc, animated: true)
         case .signUpStep3Tapped:
-            break
+            var vc: UIViewController & Coordinating = AfterLoginViewController()
+            vc.coodinator = self
+            navigationController?.navigationBar.backItem?.hidesBackButton = true
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 

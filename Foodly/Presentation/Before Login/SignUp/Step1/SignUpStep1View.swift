@@ -9,7 +9,7 @@ import UIKit
 
 class SignUpStep1View: UIView {
     private let backgroundImage = UIImageView()
-    private let emailLabel = UILabel()
+    private let nameLabel = UILabel()
     let userPhoto = UserPhoto()
     let inputTextField = InputTextField()
 
@@ -21,7 +21,7 @@ class SignUpStep1View: UIView {
     }
 
     private func addViews() {
-        addSubviews([userPhoto, backgroundImage, emailLabel, inputTextField])
+        addSubviews([userPhoto, backgroundImage, nameLabel, inputTextField])
         setupConstraints()
     }
 
@@ -33,10 +33,10 @@ class SignUpStep1View: UIView {
             userPhoto.widthAnchor.constraint(equalToConstant: 250),
             userPhoto.heightAnchor.constraint(equalToConstant: 250),
 
-            emailLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
 
-            inputTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 24),
+            inputTextField.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 24),
             inputTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             inputTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             inputTextField.heightAnchor.constraint(equalToConstant: 61),
@@ -52,6 +52,7 @@ class SignUpStep1View: UIView {
 extension SignUpStep1View: Stylable {
     func setupColors() {
         backgroundColor = .white
+        nameLabel.textColor = .black
     }
 
     func setupImages() {
@@ -59,11 +60,11 @@ extension SignUpStep1View: Stylable {
     }
 
     func setupTexts() {
-        emailLabel.text = "What's your name?"
+        nameLabel.text = "What's your name?"
     }
 
     func setupFonts() {
-        emailLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        nameLabel.font = .systemFont(ofSize: 20, weight: .semibold)
     }
 }
 
