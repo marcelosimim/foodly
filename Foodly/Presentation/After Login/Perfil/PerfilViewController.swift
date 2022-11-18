@@ -18,13 +18,12 @@ class PerfilViewController: UIViewController, Coordinating {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
-        customView.tableView.delegate = self
-        customView.tableView.dataSource = self
+        viewModelBinds()
+        tableViewBinds()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModelBinds()
         viewmodel.getUserName()
         viewmodel.getUserPhoto()
     }
@@ -37,31 +36,20 @@ class PerfilViewController: UIViewController, Coordinating {
             self?.customView.userPhoto.changeImage(data)
         }.disposed(by: disposeBag)
     }
-}
 
-extension PerfilViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        6
-    }
+    private func tableViewBinds() {
+        viewmodel.cells.bind(to: customView.tableView.rx.items(cellIdentifier: PerfilTableViewCell.identifier, cellType: PerfilTableViewCell.self)) { [weak self] (index, model, cell) in
+            guard let self = self else { return }
+            let currentIndex = self.viewmodel.cells.value[index]
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PerfilTableViewCell.identifier) as? PerfilTableViewCell else {
-            fatalError()
-        }
-        let currentIndex = viewmodel.cells[indexPath.row]
+            cell.type = currentIndex.type
+            cell.configure(icon: currentIndex.icon, title: currentIndex.title)
+        }.disposed(by: disposeBag)
 
-        cell.type = currentIndex.type
-        cell.setup(icon: currentIndex.icon, title: currentIndex.title)
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? PerfilTableViewCell else { return }
-        cell.wasSelected()
-        tableView.deselectRow(at: indexPath, animated: true)
+        customView.tableView.rx.itemSelected.bind { [weak self] indexPath in
+            guard let cell = self?.customView.tableView.cellForRow(at: indexPath) as? PerfilTableViewCell else { return }
+            cell.wasSelected()
+            self?.customView.tableView.deselectRow(at: indexPath, animated: true)
+        }.disposed(by: disposeBag)
     }
 }

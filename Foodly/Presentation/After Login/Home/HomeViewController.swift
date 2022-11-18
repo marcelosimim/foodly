@@ -21,10 +21,6 @@ class HomeViewController: UIViewController, Coordinating {
         super.viewDidLoad()
         view = customView
         setupLocation()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         bindObservables()
         bindActions()
     }

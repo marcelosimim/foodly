@@ -36,7 +36,7 @@ class DefaultHomeViewModel: HomeViewModel {
 
     private func showRestaurants() {
         guard let latitude = latitude, let longitude = longitude else { return }
-        searchUseCase.categorySearch(query: "restaurante", lat: "\(latitude)", lon: "\(longitude)") { [weak self] result in
+        searchUseCase.nearbySearch(query: "restaurante", lat: "\(latitude)", lon: "\(longitude)") { [weak self] result in
             switch result {
             case .success(let restaurants):
                 self?.convertFromModelArray(restaurants)

@@ -18,14 +18,14 @@ class SearchViewController: UIViewController, Coordinating {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
+        collectionViewBinds()
+        tableViewBinds()
+        searchBarBinds()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         customView.topCategoriesMode()
-        collectionViewBinds()
-        tableViewBinds()
-        searchBarBinds()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

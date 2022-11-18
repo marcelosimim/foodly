@@ -7,9 +7,10 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 protocol PerfilViewModel {
-    var cells: [PerfilTableViewCellModel] { get }
+    var cells: BehaviorRelay<[PerfilTableViewCellModel]> { get }
     var userName: PublishSubject<String> { get }
     var userPhoto: PublishSubject<Data> { get }
 
@@ -21,12 +22,12 @@ class DefaultPerfilViewModel: PerfilViewModel {
     private let userUseCase: UserUseCase
     var userName = PublishSubject<String>()
     var userPhoto = PublishSubject<Data>()
-    var cells = [ PerfilTableViewCellModel(icon: .favoriteIcon, title: "Your Favorites", type: .favorites),
-                  PerfilTableViewCellModel(icon: .paymentIcon, title: "Payments", type: .payments),
-                  PerfilTableViewCellModel(icon: .helpIcon, title: "Help", type: .help),
-                  PerfilTableViewCellModel(icon: .promotionIcon, title: "Promotions", type: .promotions),
-                  PerfilTableViewCellModel(icon: .notificationIcon, title: "Notifications", type: .notifications),
-                  PerfilTableViewCellModel(icon: .deliveryIcon, title: "Delivery with Foodly", type: .deliveryWith) ]
+    var cells = BehaviorRelay(value: [ PerfilTableViewCellModel(icon: .favoriteIcon, title: "Your Favorites", type: .favorites),
+                                         PerfilTableViewCellModel(icon: .paymentIcon, title: "Payments", type: .payments),
+                                         PerfilTableViewCellModel(icon: .helpIcon, title: "Help", type: .help),
+                                         PerfilTableViewCellModel(icon: .promotionIcon, title: "Promotions", type: .promotions),
+                                         PerfilTableViewCellModel(icon: .notificationIcon, title: "Notifications", type: .notifications),
+                                         PerfilTableViewCellModel(icon: .deliveryIcon, title: "Delivery with Foodly", type: .deliveryWith) ])
 
     init(userUseCase: UserUseCase) {
         self.userUseCase = userUseCase

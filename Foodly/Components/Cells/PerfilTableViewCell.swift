@@ -45,7 +45,7 @@ class PerfilTableViewCell: UITableViewCell {
         ])
     }
 
-    func setup(icon: UIImage, title: String) {
+    func configure(icon: UIImage, title: String) {
         iconView.image = icon
         titleLabel.text = title
         selectionStyle = .none

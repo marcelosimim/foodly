@@ -23,6 +23,7 @@ class PerfilView: UIView {
         let tableview = UITableView()
         tableview.register(PerfilTableViewCell.self, forCellReuseIdentifier: PerfilTableViewCell.identifier)
         tableview.separatorStyle = .none
+        tableview.rowHeight = 60
         return tableview
     }()
     let blackButton = BlackButton()
