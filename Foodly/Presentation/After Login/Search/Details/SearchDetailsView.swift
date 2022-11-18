@@ -30,6 +30,7 @@ class SearchDetailsView: UIView {
             nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
 
             addressLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            addressLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             addressLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
 
             mapView.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 16),
@@ -53,5 +54,7 @@ extension SearchDetailsView: Stylable {
     func setupFonts() {
         nameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         addressLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        addressLabel.textAlignment = .center
+        addressLabel.numberOfLines = 0
     }
 }

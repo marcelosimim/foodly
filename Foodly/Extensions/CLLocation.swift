@@ -14,4 +14,11 @@ extension CLLocation {
 
         return CLLocation(latitude: newLat, longitude: newLon)
     }
+
+    static func fromCLLocationCoordinate2D(coordinate: CLLocationCoordinate2D) -> CLLocation {
+        let newLat = CLLocationDegrees(floatLiteral: coordinate.latitude)
+        let newLon = CLLocationDegrees(floatLiteral: coordinate.longitude)
+
+        return CLLocation(latitude: newLat, longitude: newLon)
+    }
 }

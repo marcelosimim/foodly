@@ -98,7 +98,6 @@
 		A30262B529197A3B00E707C6 /* CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262B429197A3B00E707C6 /* CLLocation.swift */; };
 		A30E9E7B291D902A009B8472 /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E9E7A291D902A009B8472 /* SearchDetailsViewController.swift */; };
 		A30E9E7D291D905C009B8472 /* SearchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E9E7C291D905C009B8472 /* SearchDetailsView.swift */; };
-		A355A6622927B39A00AF83CA /* SearchDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A355A6612927B39A00AF83CA /* SearchDetailsCell.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -216,7 +215,6 @@
 		A30262B429197A3B00E707C6 /* CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocation.swift; sourceTree = "<group>"; };
 		A30E9E7A291D902A009B8472 /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
 		A30E9E7C291D905C009B8472 /* SearchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsView.swift; sourceTree = "<group>"; };
-		A355A6612927B39A00AF83CA /* SearchDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsCell.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -662,7 +660,6 @@
 				A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */,
 				A30262842916CA2400E707C6 /* CategoryCollectionViewCell.swift */,
 				A30262A2291734F800E707C6 /* RestaurantTableViewCell.swift */,
-				A355A6612927B39A00AF83CA /* SearchDetailsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -971,7 +968,6 @@
 				A30262892916DC5900E707C6 /* Category.swift in Sources */,
 				A30262A52918577F00E707C6 /* RestaurantModelBuilder.swift in Sources */,
 				A30262A3291734F800E707C6 /* RestaurantTableViewCell.swift in Sources */,
-				A355A6622927B39A00AF83CA /* SearchDetailsCell.swift in Sources */,
 				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
 				A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */,
 				A30262AF29192EBF00E707C6 /* RestaurantPoi.swift in Sources */,
