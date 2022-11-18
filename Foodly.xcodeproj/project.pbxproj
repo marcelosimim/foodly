@@ -96,6 +96,9 @@
 		A30262B129192F2200E707C6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262B029192F2200E707C6 /* Address.swift */; };
 		A30262B329192F9500E707C6 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262B229192F9500E707C6 /* Position.swift */; };
 		A30262B529197A3B00E707C6 /* CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30262B429197A3B00E707C6 /* CLLocation.swift */; };
+		A30E9E7B291D902A009B8472 /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E9E7A291D902A009B8472 /* SearchDetailsViewController.swift */; };
+		A30E9E7D291D905C009B8472 /* SearchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E9E7C291D905C009B8472 /* SearchDetailsView.swift */; };
+		A355A6622927B39A00AF83CA /* SearchDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A355A6612927B39A00AF83CA /* SearchDetailsCell.swift */; };
 		FBFDC5D9FC387E54F670EDFD /* Pods_Foodly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C83406E13854C79C4FA /* Pods_Foodly.framework */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +214,9 @@
 		A30262B029192F2200E707C6 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		A30262B229192F9500E707C6 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		A30262B429197A3B00E707C6 /* CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocation.swift; sourceTree = "<group>"; };
+		A30E9E7A291D902A009B8472 /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
+		A30E9E7C291D905C009B8472 /* SearchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsView.swift; sourceTree = "<group>"; };
+		A355A6612927B39A00AF83CA /* SearchDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsCell.swift; sourceTree = "<group>"; };
 		B318D120B5FB3B617DC7ACB5 /* Pods_FoodlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC345CF42B2136A673DF34C /* Pods_Foodly_FoodlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodly_FoodlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EDD7CBD90B66137512603E /* Pods-Foodly-FoodlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodly-FoodlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Foodly-FoodlyUITests/Pods-Foodly-FoodlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -631,6 +637,7 @@
 		A302625729130FE800E707C6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				A30E9E79291D9012009B8472 /* Details */,
 				A302625B2913101800E707C6 /* SearchViewController.swift */,
 				A302627D2916B03600E707C6 /* SearchView.swift */,
 				A30262862916D0F100E707C6 /* SearchViewModel.swift */,
@@ -655,6 +662,7 @@
 				A30262772915E2BB00E707C6 /* FiltersCollectionViewCell.swift */,
 				A30262842916CA2400E707C6 /* CategoryCollectionViewCell.swift */,
 				A30262A2291734F800E707C6 /* RestaurantTableViewCell.swift */,
+				A355A6612927B39A00AF83CA /* SearchDetailsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -682,6 +690,15 @@
 				A30262822916C2F000E707C6 /* SearchBar.swift */,
 			);
 			path = "Search Bar";
+			sourceTree = "<group>";
+		};
+		A30E9E79291D9012009B8472 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A30E9E7A291D902A009B8472 /* SearchDetailsViewController.swift */,
+				A30E9E7C291D905C009B8472 /* SearchDetailsView.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		EF47751FDEF27A3B18475B91 /* Pods */ = {
@@ -940,6 +957,7 @@
 				A30261B32911876700E707C6 /* AppDelegate.swift in Sources */,
 				A30262482912FC8D00E707C6 /* UserUseCase.swift in Sources */,
 				A302627029144BC000E707C6 /* EnjoyCard.swift in Sources */,
+				A30E9E7D291D905C009B8472 /* SearchDetailsView.swift in Sources */,
 				A302626D2914492600E707C6 /* HomeView.swift in Sources */,
 				A302624D29130B4900E707C6 /* AfterLoginCoordinator.swift in Sources */,
 				A302624F29130BB500E707C6 /* EventBeforeLogin.swift in Sources */,
@@ -953,6 +971,7 @@
 				A30262892916DC5900E707C6 /* Category.swift in Sources */,
 				A30262A52918577F00E707C6 /* RestaurantModelBuilder.swift in Sources */,
 				A30262A3291734F800E707C6 /* RestaurantTableViewCell.swift in Sources */,
+				A355A6622927B39A00AF83CA /* SearchDetailsCell.swift in Sources */,
 				A30261F62911926A00E707C6 /* RedButton.swift in Sources */,
 				A30261FB2911A21500E707C6 /* Coordinator.swift in Sources */,
 				A30262AF29192EBF00E707C6 /* RestaurantPoi.swift in Sources */,
@@ -981,6 +1000,7 @@
 				A30262762915DB8400E707C6 /* EnjoyDetailsViewController.swift in Sources */,
 				A30262362912E6E200E707C6 /* UserPhoto.swift in Sources */,
 				A30262782915E2BB00E707C6 /* FiltersCollectionViewCell.swift in Sources */,
+				A30E9E7B291D902A009B8472 /* SearchDetailsViewController.swift in Sources */,
 				A30261FD2911A23F00E707C6 /* BeforeLoginCoordinator.swift in Sources */,
 				A30262852916CA2400E707C6 /* CategoryCollectionViewCell.swift in Sources */,
 				A30262142912B95400E707C6 /* SignUpStep3View.swift in Sources */,

@@ -8,10 +8,11 @@
 import Alamofire
 import Foundation
 import RxSwift
+import RxRelay
 
 protocol SearchViewModel {
-    var categories: BehaviorSubject<[Category]> { get }
-    var restaurants: PublishSubject<[Restaurant]> { get }
+    var categories: BehaviorRelay<[Category]> { get }
+    var restaurants: BehaviorRelay<[Restaurant]> { get }
     var typeSearched: CategoryType? { get set }
 
     func search(_ query: String)
@@ -22,13 +23,13 @@ class DefaultSearchViewModel: SearchViewModel {
     private let searchUseCase: SearchUseCase
     private var latitude: Float?
     private var longitude: Float?
-    var categories = BehaviorSubject(value: [ Category(image: .pizzaCategory, type: .pizza),
+    var categories = BehaviorRelay(value: [ Category(image: .pizzaCategory, type: .pizza),
             Category(image: .hamburguerCategory, type: .hamburguer), Category(image: .meatCategory, type: .meat),
             Category(image: .hotdogCategory, type: .hotdog), Category(image: .chickenCategory, type: .chicken),
             Category(image: .fishCategory, type: .fish), Category(image: .japaneseCategory, type: .japanese),
             Category(image: .chineseCategory, type: .chinese), Category(image: .mexicanCategory, type: .mexican),
             Category(image: .italianCategory, type: .italian)])
-    var restaurants = PublishSubject<[Restaurant]>()
+    var restaurants = BehaviorRelay<[Restaurant]>(value: [])
     var typeSearched: CategoryType? = nil
     
     init(searchUseCase: SearchUseCase) {
@@ -43,13 +44,13 @@ class DefaultSearchViewModel: SearchViewModel {
             case .success(let restaurants):
                 self?.convertFromModelArray(restaurants)
             case .failure(_):
-                self?.restaurants.onNext([])
+                self?.restaurants.accept([])
             }
         }
     }
 
     func clearSearch() {
-        restaurants.onNext([])
+        restaurants.accept([])
     }
 
     private func getUserLocation() {
@@ -63,6 +64,6 @@ class DefaultSearchViewModel: SearchViewModel {
             fromModel.append(Restaurant.fromModel(model))
         }
 
-        restaurants.onNext(fromModel)
+        restaurants.accept(fromModel)
     }
 }

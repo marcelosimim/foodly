@@ -23,7 +23,9 @@ class SearchViewController: UIViewController, Coordinating {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         customView.topCategoriesMode()
-        viewModelBinds()
+        collectionViewBinds()
+        tableViewBinds()
+        searchBarBinds()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -31,28 +33,36 @@ class SearchViewController: UIViewController, Coordinating {
         viewModel.clearSearch()
     }
 
-    private func viewModelBinds() {
-        viewModel.restaurants.bind(to: customView.searchResultsTableView.rx.items(cellIdentifier: RestaurantTableViewCell.identifier, cellType: RestaurantTableViewCell.self)) { (_, restaurant, cell) in
-            cell.configure(type: .restaurant, restaurant: restaurant)
-        }.disposed(by: disposeBag)
-
+    private func collectionViewBinds() {
         viewModel.categories.bind(to: customView.categoryCollectionView.rx.items(cellIdentifier: CategoryCollectionViewCell.identifier, cellType: CategoryCollectionViewCell.self)) { (_, category, cell) in
             cell.configure(category.image, category.type)
         }.disposed(by: disposeBag)
 
         customView.categoryCollectionView.rx.itemSelected.bind { [weak self] indexPath in
-            do {
-                guard let self = self else { return }
-                let category = try self.viewModel.categories.value()[indexPath.row].type
-                self.viewModel.typeSearched = category
-                self.viewModel.search(category.rawValue)
-                self.customView.searchResultMode()
-            } catch { }
+            guard let self = self else { return }
+            let category = self.viewModel.categories.value[indexPath.row].type
+            self.viewModel.typeSearched = category
+            self.viewModel.search(category.rawValue)
+            self.customView.searchResultMode()
+        }.disposed(by: disposeBag)
+    }
+
+    private func tableViewBinds() {
+        viewModel.restaurants.bind(to: customView.searchResultsTableView.rx.items(cellIdentifier: RestaurantTableViewCell.identifier, cellType: RestaurantTableViewCell.self)) { (_, restaurant, cell) in
+            cell.configure(type: .restaurant, restaurant: restaurant)
         }.disposed(by: disposeBag)
 
+        customView.searchResultsTableView.rx.itemSelected.bind { [ weak self ] indexPath in
+            guard let self = self else { return }
+            let restaurant = self.viewModel.restaurants.value[indexPath.row]
+            self.showDetails(restaurant)
+        }.disposed(by: disposeBag)
+    }
+
+    private func searchBarBinds() {
         customView.searchBar.textField.rx.controlEvent(.editingDidEndOnExit).bind { [weak self] in
             guard let textField = self?.customView.searchBar.textField, let text = textField.text else { return }
-            if text != "" {
+            if !text.isEmpty {
                 self?.viewModel.search(text)
                 self?.customView.searchResultMode()
             }
@@ -64,6 +74,10 @@ class SearchViewController: UIViewController, Coordinating {
             self?.customView.topCategoriesMode()
         }.disposed(by: disposeBag)
     }
+
+    private func showDetails(_ restaurant: Restaurant) {
+        let vc = SearchDetailsViewController()
+        vc.restaurant = restaurant
+        navigationController?.present(vc, animated: true)
+    }
 }
-
-
